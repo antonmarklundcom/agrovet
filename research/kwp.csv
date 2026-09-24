@@ -1,0 +1,138 @@
+keyword,avg_monthly_searches,cpc_low_sek,cpc_high_sek,cluster
+veterinario cerca de mi,14800,0.60,5.76,vet-clinic
+veterinaria,8100,0.89,9.89,vet-clinic
+veterinario,8100,0.89,9.89,vet-clinic
+clinica veterinaria,1000,1.54,9.71,vet-clinic
+veterinario 24 horas cerca de mi,720,1.08,6.88,vet-clinic
+veterinario 24 h,480,1.09,8.03,vet-clinic
+veterinaria 24 hs,480,1.09,8.03,vet-clinic
+veterinaria cerca,260,0.50,13.80,vet-clinic
+hospital de animales,260,,,vet-clinic
+consulta veterinaria,260,,,vet-clinic
+clinica veterinaria cerca de mi,170,,,vet-clinic
+hospital veterinario,170,,,vet-clinic
+veterinario 24 horas,140,0.85,5.82,vet-clinic
+veterinario abierto ahora,140,,,vet-clinic
+veterinario urgencias,70,,,vet-clinic
+veterinaria san lorenzo,880,,,vet-clinic-geo
+veterinaria villarrica,170,,,vet-clinic-geo
+agroveterinaria,2400,,,agroveterinaria
+agropecuaria,1300,2.57,8.82,agroveterinaria
+agroveterinaria cerca de mi,1000,,,agroveterinaria
+agro veterinaria,320,,,agroveterinaria
+agropecuaria cerca de mi,140,,,agroveterinaria
+productos agropecuaria,90,2.58,5.95,agroveterinaria
+agroveterinaria san pedro,1000,,,geo
+agroveterinaria asuncion,390,,,geo
+agroveterinaria san lorenzo,260,,,geo
+agroveterinaria san josé,170,,,geo
+agroveterinaria san antonio,110,,,geo
+agroveterinaria central,1300,0.88,4.47,competitor-brand
+agroveterinaria la granja,90,,,competitor-brand
+veterinario a domicilio,50,,,services
+vacunación aftosa,50,,,services
+sanidad animal,50,,,services
+rural veterinaria,50,,,services
+vacuna aftosa,50,,,services
+urgencia veterinaria cerca de mi,40,,,vet-clinic
+vacuna antiaftosa,30,,,services
+ecografía veterinaria,20,,,services
+veterinario rural,10,,,services
+asesoramiento ganadero,10,,,services
+veterinario grandes animales,10,,,services
+antiparasitario para perros,1000,,,antiparasitarios
+antiparasitario,1000,,,antiparasitarios
+antiparasitario para gatos,390,,,antiparasitarios
+desparasitante,140,,,antiparasitarios
+desparasitantes,140,,,antiparasitarios
+antiparasitario para cerdos,110,,,antiparasitarios
+antiparasitario interno para perros,90,,,antiparasitarios
+antiparasitario para vacas,70,,,antiparasitarios
+ivermectina,8100,,,ivermectina (mostly human intent)
+ivermectina para que sirve,1300,,,ivermectina (mostly human intent)
+invectina para que sirve,1300,,,ivermectina (mostly human intent)
+ivomec para perros,480,,,ivermectina-vet
+invectina para perros,480,,,ivermectina-vet
+ivermin para perros,480,,,ivermectina-vet
+ivermectina precio,260,,,ivermectina-vet
+ivomec en perros,90,,,ivermectina-vet
+ivermectina para gatos,70,,,ivermectina-vet
+ivermectina para animales,50,,,ivermectina-vet
+ivermectina para perros precio,40,,,ivermectina-vet
+antibioticos para perros,210,,,antibioticos
+terramicina veterinaria,170,,,antibioticos
+curabichera,1300,,,curabichera
+cura bichera,1300,,,curabichera
+cura bicheras,1300,,,curabichera
+curabichera plata,480,,,curabichera
+curabichera para perros,170,,,curabichera
+curabichera precio,90,,,curabichera
+curabichera en pasta,90,,,curabichera
+sal mineral para ganado,170,,,mineral
+sal mineral,140,,,mineral
+sal para vacas,50,,,mineral
+sal proteica para bovinos,50,,,mineral
+vitaminas para vacas flacas,50,,,mineral
+purina para perros,720,2.47,3.06,pet-food
+comida para perros,480,2.68,3.68,pet-food
+monello cachorros,480,2.53,3.22,pet-food
+pedigree cachorro,390,2.54,3.09,pet-food
+purina para gatos,390,2.13,2.93,pet-food
+comida para gatos,320,2.38,3.32,pet-food
+dog chow cachorro,320,2.50,3.35,pet-food
+whiskas gatos,320,,,pet-food
+monello gatitos,320,2.36,3.10,pet-food
+pronto dog cachorro,320,2.47,3.13,pet-food
+balanceado para perros,260,2.56,3.07,pet-food
+balanceado,210,,,pet-food
+proplan,210,2.42,3.57,pet-food
+primogato,210,2.69,4.31,pet-food
+purina para cachorros,170,2.37,3.09,pet-food
+vital can premium,140,0.57,3.06,pet-food
+racion para perros,140,,,pet-food
+alimento para perros,110,,,pet-food
+balanceado para gato,50,,,pet-food
+balanceado para cerdo,110,,,feed-livestock
+balanceado para gallina ponedora,90,,,feed-livestock
+balanceado para vacas,50,,,feed-livestock
+tejido de alambre,1300,2.67,8.01,alambre
+alambre,720,,,alambre
+alambre de puas,480,1.78,5.66,alambre
+alambre dulce,390,,,alambre
+precio de alambre tejido,320,,,alambre
+alambre galvanizado,210,3.49,24.25,alambre
+tejido de alambre precio por metro,210,,,alambre
+alambre de atar,210,,,alambre
+tejido para gallinero,140,,,alambre
+alambre de puas precio,140,,,alambre
+glifosato,1000,2.17,5.25,herbicidas
+herbicida,590,,,herbicidas
+mata yuyo,390,,,herbicidas
+tordon herbicida,260,2.20,4.06,herbicidas
+dicamba herbicida,110,2.27,2.96,herbicidas
+herbicida 2 4 d,90,2.17,4.21,herbicidas
+herbicida para hoja ancha,90,2.07,5.02,herbicidas
+glifosato precio,70,2.09,5.36,herbicidas
+fertilizante,720,2.57,5.38,fertilizantes
+humus de lombriz,320,,,fertilizantes
+sulfato de amonio,320,,,fertilizantes
+abono organico,260,,,fertilizantes
+nitrato de calcio,260,,,fertilizantes
+abonos,260,,,fertilizantes
+urea fertilizante,170,4.21,6.59,fertilizantes
+abono foliar,170,2.17,6.92,fertilizantes
+fertilizante npk,140,2.67,5.37,fertilizantes
+fertilizante 15 15 15,110,,,fertilizantes
+fertilizante para pasto,90,,,fertilizantes
+urea para pasto,90,,,fertilizantes
+semillas,720,,,semillas
+bebedero electrico,2400,0.20,1.29,bebederos (likely household)
+bebederos de agua,880,0.21,1.98,bebederos (likely household)
+bebederos para gallinas,170,1.15,7.34,bebederos
+bebederos,90,0.15,2.37,bebederos
+bebederos para cerdos,70,,,bebederos
+chupon para cerdo,50,,,bebederos
+magnesio,6600,0.21,2.55,skip-human
+antiparasitario para adultos,1600,,,skip-human
+ivermectina dosis adulto,1600,,,skip-human
+ivermectina crema,590,,,skip-human
