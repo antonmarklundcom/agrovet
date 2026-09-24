@@ -107,7 +107,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar semillas', 'whatsappText' => ''],
     'related'   => ['sal-mineral', 'fertilizantes', 'balanceados'],
-    'guides'    => [],
+    'guides'    => ['brachiaria-brizantha'],
     'articles'  => [],
     'toolLinks' => [
         [

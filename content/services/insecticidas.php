@@ -104,7 +104,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar insecticida', 'whatsappText' => ''],
     'related'   => ['fumigadoras', 'herbicidas', 'raticidas'],
-    'guides'    => ['hormigas-cortadoras'],
+    'guides'    => ['hormigas-cortadoras', 'cipermetrina', 'fipronil', 'tierra-de-diatomeas'],
     'articles'  => [],
     'toolLinks' => [],
 ];

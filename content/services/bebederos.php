@@ -111,7 +111,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar bebederos', 'whatsappText' => ''],
     'related'   => ['sal-mineral', 'alambre', 'tejido-de-alambre'],
-    'guides'    => [],
+    'guides'    => ['gallinas-ponedoras'],
     'articles'  => [],
     'toolLinks' => [],
 ];

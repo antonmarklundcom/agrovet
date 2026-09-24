@@ -117,7 +117,7 @@ return [
     ],
     'cta'       => ['label' => 'Pedir veterinario a domicilio', 'whatsappText' => ''],
     'related'   => ['veterinaria', 'antiparasitarios-para-perros', 'antiparasitarios-para-gatos'],
-    'guides'    => ['cada-cuanto-desparasitar'],
+    'guides'    => ['cada-cuanto-desparasitar', 'vacuna-antirrabica'],
     'articles'  => [],
     'toolLinks' => [],
 ];

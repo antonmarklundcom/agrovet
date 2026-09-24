@@ -108,7 +108,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar antiparasitario para ganado', 'whatsappText' => ''],
     'related'   => ['curabichera', 'ivermectina', 'sal-mineral'],
-    'guides'    => ['doramectina', 'albendazol-veterinario', 'garrapata-en-bovinos'],
+    'guides'    => ['doramectina', 'albendazol-veterinario', 'garrapata-en-bovinos', 'levamisol'],
     'articles'  => ['temporada-de-garrapatas'],
     'toolLinks' => [],
 ];

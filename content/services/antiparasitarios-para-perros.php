@@ -111,7 +111,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar antiparasitario para perros', 'whatsappText' => ''],
     'related'   => ['antiparasitarios-para-gatos', 'ivermectina', 'alimento-para-mascotas'],
-    'guides'    => ['cada-cuanto-desparasitar', 'pulgas-y-garrapatas-en-perros'],
+    'guides'    => ['cada-cuanto-desparasitar', 'pulgas-y-garrapatas-en-perros', 'sarna-en-perros'],
     'articles'  => [],
     'toolLinks' => [],
 ];

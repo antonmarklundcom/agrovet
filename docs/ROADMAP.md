@@ -58,6 +58,17 @@
 - `docs/DEPLOY.md`: Hostinger Git and zip deploy, config.php, SSL, Search Console.
 - Keyword round 2 will tune these pages' titles once the data exists.
 
+## v1.3 (keyword round 2)
+
+- Brand pages: NexGard (2.900 + Spectra 1.000), Bravecto (720), Simparica (210); silo bolsa (260).
+- Guides: sarna en perros (1.000) y gatos (480), vacuna antirrábica (390), gusano barrenador
+  (390), levamisol (320), cipermetrina (720), fipronil (590), tierra de diatomeas / jabón potásico
+  (320 each), brachiaria brizantha (480), gallinas ponedoras (390).
+- Retitled to searched phrases: pipeta para perros (590), veneno para ratas (880),
+  oxitetraciclina (480), remedio para garrapatas en perros (390), comederos para gallinas (210).
+- Seasonal blog (4 posts); image slots and image sitemap; 71-image plan (36 credits),
+  waiting only on the environment allowing *.cloudfront.net.
+
 ## Next
 
 1. **Keyword Planner round 2** for groups the first export did not cover: flea and tick
