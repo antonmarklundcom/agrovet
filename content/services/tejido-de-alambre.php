@@ -8,7 +8,7 @@ return [
     'navLabel'        => 'Tejido de alambre',
     'cluster'         => 'campo',
     'parent'          => null,
-    'seoTitle'        => 'Tejido de alambre: precio y envío al campo',
+    'seoTitle'        => 'Tejido de alambre: precio por metro',
     'metaDescription' => 'Tejido romboidal, olímpico, hexagonal para gallinero y electrosoldado, por '
                        . 'metro o por rollo. Cotizá por WhatsApp sin costo y recibilo en todo Paraguay.',
     'hero' => [

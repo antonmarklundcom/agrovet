@@ -15,7 +15,7 @@ return [
     'navLabel'        => 'Curabichera',
     'cluster'         => 'sanidad',
     'parent'          => null,
-    'seoTitle'        => 'Curabichera: precio y envío a todo el país',
+    'seoTitle'        => 'Curabichera: precio y envío al país',
     'metaDescription' => 'Curabichera en aerosol, plata, polvo y pasta para ganado, ovejas y perros. '
                        . 'Cotizá por WhatsApp sin costo y recibila en todo Paraguay.',
     'hero' => [

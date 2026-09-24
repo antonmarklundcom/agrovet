@@ -8,7 +8,7 @@ return [
     'navLabel'        => 'Alambre',
     'cluster'         => 'campo',
     'parent'          => null,
-    'seoTitle'        => 'Alambre para cerco: tipos y envío al campo',
+    'seoTitle'        => 'Alambre de púas, dulce y galvanizado',
     'metaDescription' => 'Alambre de púas, liso de alta resistencia y dulce para atar, por rollo o por '
                        . 'unidad. Cotizá por WhatsApp sin costo y recibilo en todo Paraguay.',
     'hero' => [

@@ -8,7 +8,7 @@ return [
     'navLabel'        => 'Antiparasitario para perros',
     'cluster'         => 'sanidad',
     'parent'          => null,
-    'seoTitle'        => 'Antiparasitario para perros: envío al país',
+    'seoTitle'        => 'Antiparasitario para perros con envío',
     'metaDescription' => 'Antiparasitario interno y externo para perros: pipetas, comprimidos y '
                        . 'desparasitantes contra pulgas, garrapatas y lombrices. Cotizá sin costo '
                        . 'por WhatsApp.',

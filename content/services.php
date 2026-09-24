@@ -44,7 +44,11 @@ $records = [];
 foreach (glob(__DIR__ . '/services/*.php') ?: [] as $file) {
     $records[basename($file, '.php')] = require $file;
 }
+/* Group by cluster first (the order content/ui.php lists them), so the home grid
+   and the footer read category by category like the mega-menu does. */
+$clusterRank = array_flip(array_keys(content('ui')['clusters']));
 uksort($records, static fn (string $a, string $b): int =>
-    [($records[$a]['order'] ?? 100), $a] <=> [($records[$b]['order'] ?? 100), $b]);
+    [$clusterRank[$records[$a]['cluster']] ?? 99, ($records[$a]['order'] ?? 100), $a]
+    <=> [$clusterRank[$records[$b]['cluster']] ?? 99, ($records[$b]['order'] ?? 100), $b]);
 
 return $records;

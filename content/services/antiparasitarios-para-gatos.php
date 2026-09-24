@@ -8,7 +8,7 @@ return [
     'navLabel'        => 'Antiparasitario para gatos',
     'cluster'         => 'sanidad',
     'parent'          => null,
-    'seoTitle'        => 'Antiparasitario para gatos: envío al país',
+    'seoTitle'        => 'Antiparasitario para gatos con envío',
     'metaDescription' => 'Antiparasitario para gatos: pipetas contra pulgas y comprimidos internos, '
                        . 'aptos para felinos. Cotizá sin costo por WhatsApp, envío a todo Paraguay.',
     'hero' => [
