@@ -29,36 +29,14 @@
 
 declare(strict_types=1);
 
-return [
+/* Calculators. One file per record in content/tools/<slug>.php, returning that
+   record; the file name is the slug. Records sort by their optional 'order'
+   key (default 100), then by slug — so parallel writers never touch one file. */
+$records = [];
+foreach (glob(__DIR__ . '/tools/*.php') ?: [] as $file) {
+    $records[basename($file, '.php')] = require $file;
+}
+uksort($records, static fn (string $a, string $b): int =>
+    [($records[$a]['order'] ?? 100), $a] <=> [($records[$b]['order'] ?? 100), $b]);
 
-    'herramienta-ejemplo' => [
-        'example' => true,
-        'path'            => '/herramientas/herramienta-ejemplo/',
-        'title'           => 'Calculadora de ejemplo',
-        'navLabel'        => 'Calculadora de ejemplo',
-        'seoTitle'        => 'Calculadora de ejemplo',
-        'metaDescription' => 'Calculadora de ejemplo: muestra cómo una herramienta se arma sobre '
-                           . 'templates/tool.php y el módulo de mercado, sin tocar el chrome.',
-        'hero' => [
-            'eyebrow' => 'Herramientas',
-            'h1'      => 'Calculadora de ejemplo',
-            'lead'    => 'Una línea que dice exactamente qué calcula y para quién.',
-        ],
-        'intro' => [
-            'Dos o tres párrafos que explican la cuenta que hace la calculadora, con las reglas '
-                . 'que aplica y sus límites. Este texto se lee sin JavaScript y es lo que posiciona '
-                . 'la página: la calculadora convierte, el texto es lo que trae la visita.',
-        ],
-        'faq' => [
-            [
-                'q' => '¿De dónde salen los números?',
-                'a' => 'Del módulo de mercado (lib/market/<market>.php), que es la única fuente de '
-                     . 'tablas legales del sitio.',
-            ],
-        ],
-        'related'       => ['servicio-ejemplo'],
-        'ctaWhatsapp'   => '',
-        'formNeed'      => 'servicio',
-        'analyticsTool' => 'herramienta_ejemplo',
-    ],
-];
+return $records;

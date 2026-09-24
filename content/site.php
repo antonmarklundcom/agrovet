@@ -9,19 +9,20 @@
  * partial that would show it hides instead or falls back to neutral phrasing.
  * Never a placeholder number, never an invented address.
  *
- * THIS FILE IS EXAMPLE DATA. Step 2 of "Start a new site (T0)" in README.md
- * replaces every value below with the real business.
+ * agroveterinaria.com.py runs as a lead-generation site until an operating partner
+ * (store, distributor, vet) is signed: no address, RUC or SENACSA number is shown
+ * until one is confirmed.
  */
 
 declare(strict_types=1);
 
 return [
     // --- identity -----------------------------------------------------------
-    'name'   => 'Ejemplo S.A.',
+    'name'   => 'Agroveterinaria',
     // Bare hostname, no scheme: the wordmark and robots.txt print it.
-    'domain' => 'ejemplo.com.py',
+    'domain' => 'agroveterinaria.com.py',
     // Lower-case, filename-safe: names the deploy zip (dist/<slug>-DATE.zip).
-    'slug'   => 'ejemplo',
+    'slug'   => 'agroveterinaria',
 
     // Which lib/market/<market>.php + assets/js/market/<market>.js pair loads:
     // money formatting, tax-id validation, long dates, VAT rates and the legal
@@ -31,11 +32,18 @@ return [
     // schema.org types for the organisation block, most specific first. See
     // https://schema.org/LocalBusiness for the list ('LegalService',
     // 'Plumber', 'Dentist', 'AccountingService', …).
-    'schemaType' => ['LocalBusiness'],
+    // No storefront yet: an online store that quotes and ships nationwide.
+    // Switch to ['VeterinaryCare', 'Store'] only once a physical address exists.
+    'schemaType' => ['OnlineStore'],
+
+    // Path of the services hub. '/servicios/' by default; a store can use
+    // '/productos/'. Move the servicios/ route directory and its
+    // content/pages.php key to match.
+    'servicesHub' => '/productos/',
 
     'legalName'   => null,                       // registered legal name
-    'description' => 'Empresa de ejemplo: reemplace este texto por lo que hace el negocio, '
-                   . 'en una frase que un cliente reconozca.',
+    'description' => 'Productos veterinarios y agropecuarios con cotización sin costo por '
+                   . 'WhatsApp y envío a todo Paraguay.',
 
     // --- contact ------------------------------------------------------------
     // 'phone' and 'whatsapp' in international form, e.g. '+595 981 123 456'.
@@ -43,7 +51,7 @@ return [
     // service CTA point at /contacto/ instead of wa.me — see
     // partials/whatsapp-fab.php.
     'phone'    => null,
-    'whatsapp' => null,
+    'whatsapp' => '+595 992 279599',
     'email'    => null,
 
     // --- address ------------------------------------------------------------

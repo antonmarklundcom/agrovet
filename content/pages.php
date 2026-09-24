@@ -27,9 +27,10 @@ declare(strict_types=1);
 
 return [
     '/' => [
-        'title'       => 'Inicio',
-        'description' => 'Página de ejemplo del template: reemplace este texto por lo que hace el '
-                       . 'negocio, para quién y en qué ciudad, en 120–155 caracteres.',
+        // Carries the site name, so seo_title() adds no suffix.
+        'title'       => 'Agroveterinaria online en Paraguay, envío al país',
+        'description' => 'Agroveterinaria online: curabicheras, antiparasitarios, sal mineral, '
+                       . 'balanceados, alambres y herbicidas. Cotización sin costo y envío a todo Paraguay.',
         'h1'          => '',
         'lead'        => '',
         'stub'        => false,
@@ -37,65 +38,43 @@ return [
         'priority'    => '1.0',
     ],
 
-    '/servicios/' => [
-        'title'       => 'Servicios',
-        'description' => 'Todos los servicios del negocio en una sola página, agrupados por tipo, '
-                       . 'con el detalle de qué incluye cada uno.',
+    '/productos/' => [
+        'title'       => 'Productos veterinarios y agropecuarios',
+        'description' => 'Productos veterinarios y agropecuarios por categoría: sanidad animal, '
+                       . 'nutrición, alambres, herbicidas y fertilizantes. Cotizá por WhatsApp.',
         'h1'          => '',
         'lead'        => '',
         'stub'        => false,
-        'changefreq'  => 'monthly',
+        'changefreq'  => 'weekly',
         'priority'    => '0.9',
     ],
 
-    '/precios/' => [
-        'title'       => 'Precios y planes',
-        'description' => 'Los planes disponibles, con el alcance de cada uno y un presupuesto a '
-                       . 'medida cuando el caso no entra en ninguno.',
-        'h1'          => 'Precios',
-        'lead'        => 'El alcance se define por escrito antes de empezar.',
-        'stub'        => false,
-        'changefreq'  => 'monthly',
-        'priority'    => '0.7',
-    ],
-
     '/herramientas/' => [
-        'title'       => 'Herramientas',
-        'description' => 'Calculadoras gratuitas para resolver las cuentas que más nos preguntan, '
-                       . 'con el detalle de cómo se calcula cada una.',
-        'h1'          => 'Herramientas',
-        'lead'        => 'Calculadoras gratuitas para las cuentas más frecuentes.',
+        'title'       => 'Calculadoras para el campo',
+        'description' => 'Calculadoras gratuitas para el campo: cuánto alambre necesitás para un '
+                       . 'alambrado y cuántas bolsas de fertilizante por hectárea.',
+        'h1'          => 'Calculadoras para el campo',
+        'lead'        => 'Hacé la cuenta antes de pedir: metros, rollos y bolsas, en segundos.',
         'stub'        => false,
         'changefreq'  => 'monthly',
         'priority'    => '0.7',
     ],
 
     '/guias/' => [
-        'title'       => 'Guías',
-        'description' => 'Guías paso a paso de los trámites y procesos que más nos consultan, '
-                       . 'escritas para hacerlas uno mismo.',
-        'h1'          => 'Guías',
-        'lead'        => 'Cómo hacer, paso a paso, lo que más nos preguntan.',
+        'title'       => 'Guías de sanidad animal y campo',
+        'description' => 'Guías prácticas para productores y dueños de mascotas: curabicheras, '
+                       . 'desparasitación, ivermectina, alambrados y control de malezas.',
+        'h1'          => 'Guías de sanidad animal y campo',
+        'lead'        => 'Respuestas claras a las preguntas que más nos hacen, sin reemplazar al veterinario.',
         'stub'        => false,
         'changefreq'  => 'monthly',
         'priority'    => '0.7',
     ],
 
-    '/blog/' => [
-        'title'       => 'Blog',
-        'description' => 'Artículos prácticos sobre el rubro, escritos por el equipo y '
-                       . 'actualizados cuando cambia algo que importa.',
-        'h1'          => 'Blog',
-        'lead'        => 'Artículos prácticos sobre el rubro.',
-        'stub'        => false,
-        'changefreq'  => 'weekly',
-        'priority'    => '0.6',
-    ],
-
     '/contacto/' => [
-        'title'       => 'Contacto',
-        'description' => 'Escríbanos por WhatsApp o déjenos sus datos: le respondemos dentro del '
-                       . 'siguiente día hábil con una propuesta concreta.',
+        'title'       => 'Contacto y cotizaciones',
+        'description' => 'Pedí tu cotización de productos veterinarios y agropecuarios por WhatsApp '
+                       . 'o por formulario. Respondemos con precio y costo de envío.',
         'h1'          => '',
         'lead'        => '',
         'stub'        => false,
@@ -105,32 +84,35 @@ return [
 
     '/privacidad/' => [
         'title'       => 'Política de privacidad',
-        'description' => 'Cómo tratamos los datos personales que nos deja en el formulario y cómo '
-                       . 'puede pedir su acceso, corrección o eliminación.',
+        'description' => 'Cómo tratamos los datos que nos dejás en el formulario o por WhatsApp, y '
+                       . 'cómo pedir su acceso, corrección o eliminación.',
         'h1'          => 'Política de privacidad',
-        'lead'        => 'Cómo tratamos los datos personales que nos confía.',
+        'lead'        => 'Cómo tratamos los datos personales que nos confiás.',
         'sections'    => [
             [
                 'h2'   => 'Qué datos recogemos',
                 'body' => [
-                    'Reemplace este texto. Recogemos únicamente los datos que usted escribe en el '
-                        . 'formulario de contacto —nombre, teléfono, correo y el mensaje— más los '
-                        . 'parámetros de campaña que trae el enlace por el que llegó.',
+                    'Recogemos únicamente los datos que escribís en el formulario de cotización '
+                        . '(nombre, teléfono, correo, localidad y el detalle del pedido) o que nos '
+                        . 'mandás por WhatsApp, más los parámetros de campaña que trae el enlace por '
+                        . 'el que llegaste al sitio.',
                 ],
             ],
             [
                 'h2'   => 'Para qué los usamos',
                 'body' => [
-                    'Reemplace este texto. Usamos sus datos para responderle y para llevar el '
-                        . 'seguimiento de su consulta. No los vendemos ni los cedemos a terceros '
-                        . 'ajenos a la prestación del servicio.',
+                    'Usamos tus datos para responderte, preparar la cotización y coordinar el envío. '
+                        . 'Para cumplir un pedido podemos compartir los datos necesarios con el '
+                        . 'proveedor, el veterinario o la transportadora que lo atiende. No vendemos '
+                        . 'tus datos ni los usamos para fines ajenos a tu consulta.',
                 ],
             ],
             [
-                'h2'   => 'Sus derechos',
+                'h2'   => 'Tus derechos',
                 'body' => [
-                    'Reemplace este texto por la vía de contacto real para pedir el acceso, la '
-                        . 'corrección o la eliminación de sus datos.',
+                    'Podés pedir en cualquier momento el acceso, la corrección o la eliminación de '
+                        . 'tus datos escribiéndonos por WhatsApp al mismo número desde el que nos '
+                        . 'contactaste.',
                 ],
             ],
         ],
@@ -140,24 +122,33 @@ return [
     ],
 
     '/terminos/' => [
-        'title'       => 'Términos de servicio',
-        'description' => 'Las condiciones bajo las que prestamos nuestros servicios: alcance, '
-                       . 'plazos y responsabilidades de cada parte.',
-        'h1'          => 'Términos de servicio',
-        'lead'        => 'Condiciones bajo las que prestamos nuestros servicios.',
+        'title'       => 'Términos de uso',
+        'description' => 'Condiciones de uso del sitio y de las cotizaciones: precios, disponibilidad, '
+                       . 'envíos y venta de medicamentos veterinarios bajo receta.',
+        'h1'          => 'Términos de uso',
+        'lead'        => 'Condiciones bajo las que cotizamos y vendemos.',
         'sections'    => [
             [
-                'h2'   => 'Alcance',
+                'h2'   => 'Cotizaciones',
                 'body' => [
-                    'Reemplace este texto por el alcance real: qué se contrata, qué queda fuera y '
-                        . 'cómo se acuerda cualquier trabajo adicional.',
+                    'Los precios y la disponibilidad se confirman en cada cotización y valen por el '
+                        . 'plazo que se indique en ella. Una cotización no obliga a comprar.',
                 ],
             ],
             [
-                'h2'   => 'Plazos y responsabilidades',
+                'h2'   => 'Medicamentos veterinarios',
                 'body' => [
-                    'Reemplace este texto por los plazos reales y por lo que necesita de parte del '
-                        . 'cliente para poder cumplirlos.',
+                    'Los productos de venta bajo receta veterinaria se despachan solo contra receta '
+                        . 'de un profesional matriculado. La información de este sitio es general: '
+                        . 'la dosis y el uso de cada producto los indica su etiqueta y tu veterinario. '
+                        . 'Ningún producto veterinario es apto para uso en personas.',
+                ],
+            ],
+            [
+                'h2'   => 'Envíos',
+                'body' => [
+                    'El costo y el plazo de envío se informan en la cotización según la localidad de '
+                        . 'destino y el medio de transporte acordado.',
                 ],
             ],
         ],
@@ -166,12 +157,10 @@ return [
         'priority'    => '0.3',
     ],
 
-    // Served by 404.php, not by a route file: it has no URL of its own, so it
-    // is excluded from the sitemap and from the route contract.
     '/404' => [
         'title'       => 'Página no encontrada',
-        'description' => 'No encontramos la página que buscaba. Vea nuestros servicios o '
-                       . 'escríbanos y le indicamos dónde está lo que necesita.',
+        'description' => 'No encontramos la página que buscabas. Mirá nuestras categorías de productos '
+                       . 'o escribinos y te ayudamos a encontrar lo que necesitás.',
         'h1'          => 'No encontramos esta página',
         'lead'        => '',
         'stub'        => false,

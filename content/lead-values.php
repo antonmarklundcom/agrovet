@@ -49,78 +49,293 @@ $tierValues = [
 /* Labels for `need` keys that are not one of the form chips, so the CRM reads a
    sentence instead of a raw key. */
 $needLabels = [
-    'recordatorio' => 'Recordatorio de vencimientos',
+    'recordatorio' => 'Recordatorio de reposición',
 ];
 
 return [
-
     'tierValues' => $tierValues,
     'needLabels' => $needLabels,
 
-    /* Which services the WhatsApp menu offers, in order, after the current
-       page's own service. Keep it short: four is plenty. */
-    'whatsappMenu' => ['servicio-ejemplo'],
+    /* Which products the WhatsApp menu offers after the current page's own. */
+    'whatsappMenu' => ['curabichera', 'sal-mineral', 'alambre', 'veterinaria'],
 
-    /* The record for a page that names no service: an article without one, a
-       legal page, the homepage. Never null — every form resolves to something. */
     'default' => [
         'menuLabel'    => 'Consulta general',
         'need'         => 'otro',
         'tier'         => 'C',
-        'whatsappText' => 'Hola, quisiera hacer una consulta.',
+        'whatsappText' => 'Hola, quiero cotizar productos veterinarios o agropecuarios.',
         'nextStep'     => [
-            'Le respondemos dentro del siguiente día hábil.',
-            'Tenga a mano una descripción breve de su situación.',
+            'Te respondemos por WhatsApp con disponibilidad y precio.',
+            'Mandanos la lista de productos, cantidades y tu localidad.',
         ],
         'crmTag'       => 'consulta-general',
         'nextLink'     => null,
     ],
 
-    /* One record per key in content/services.php. verify.sh fails when a service
-       has none — an untagged lead is a lead nobody can route. */
     'services' => [
-        'servicio-ejemplo' => [
-            'example' => true,
-            'menuLabel'    => 'Servicio de ejemplo',
-            'need'         => 'servicio',
-            'tier'         => 'A',
-            'whatsappText' => 'Hola, quisiera consultar por el servicio de ejemplo.',
+        'curabichera' => [
+            'menuLabel'    => 'Curabichera',
+            'need'         => 'sanidad',
+            'tier'         => 'B',
+            'whatsappText' => 'Hola, quiero cotizar curabichera.',
             'nextStep'     => [
-                'Le respondemos dentro del siguiente día hábil.',
-                'Tenga a mano la documentación que pedimos en "qué necesitamos de usted".',
+                'Contanos si la querés en aerosol, en polvo o en pasta, y cuántas unidades.',
+                'Decinos a qué localidad hay que enviarla.',
             ],
-            'crmTag'       => 'servicio-ejemplo',
-            'nextLink'     => [
-                'path'  => '/herramientas/herramienta-ejemplo/',
-                'label' => 'Mientras tanto, haga la cuenta',
-            ],
+            'crmTag'       => 'curabichera',
+            'nextLink'     => ['path' => '/guias/como-usar-curabichera/', 'label' => 'Mientras tanto: cómo usar la curabichera'],
         ],
-    ],
-
-    /* One record per key in content/tools.php. A calculator lead is worth less
-       than a service lead — that is the whole point of tiering them. */
-    'tools' => [
-        'herramienta-ejemplo' => [
-            'example' => true,
-            'menuLabel'    => 'Calculadora de ejemplo',
-            'need'         => 'servicio',
+        'antiparasitarios-para-perros' => [
+            'menuLabel'    => 'Antiparasitario para perros',
+            'need'         => 'mascotas',
             'tier'         => 'C',
-            'whatsappText' => 'Hola, usé la calculadora de ejemplo y quisiera confirmar el resultado.',
+            'whatsappText' => 'Hola, quiero cotizar antiparasitarios para perros.',
             'nextStep'     => [
-                'Le respondemos dentro del siguiente día hábil.',
-                'Guarde el resultado que calculó: se lo revisamos con usted.',
+                'Tené a mano el peso aproximado de tu perro y si es interno, externo o ambos.',
+                'Decinos a qué localidad hay que enviarlo.',
             ],
-            'crmTag'       => 'herramienta-ejemplo',
+            'crmTag'       => 'antiparasitarios-para-perros',
+            'nextLink'     => ['path' => '/guias/cada-cuanto-desparasitar-perros-y-gatos/', 'label' => 'Cada cuánto desparasitar'],
+        ],
+        'antiparasitarios-para-gatos' => [
+            'menuLabel'    => 'Antiparasitario para gatos',
+            'need'         => 'mascotas',
+            'tier'         => 'C',
+            'whatsappText' => 'Hola, quiero cotizar antiparasitarios para gatos.',
+            'nextStep'     => [
+                'Tené a mano el peso aproximado de tu gato.',
+                'Decinos a qué localidad hay que enviarlo.',
+            ],
+            'crmTag'       => 'antiparasitarios-para-gatos',
+            'nextLink'     => ['path' => '/guias/cada-cuanto-desparasitar-perros-y-gatos/', 'label' => 'Cada cuánto desparasitar'],
+        ],
+        'antiparasitarios-para-ganado' => [
+            'menuLabel'    => 'Antiparasitario para ganado',
+            'need'         => 'sanidad',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar antiparasitarios para ganado.',
+            'nextStep'     => [
+                'Contanos la especie y cuántas cabezas vas a tratar.',
+                'Si tenés un producto de preferencia, mandanos el nombre o una foto.',
+            ],
+            'crmTag'       => 'antiparasitarios-para-ganado',
+            'nextLink'     => null,
+        ],
+        'ivermectina' => [
+            'menuLabel'    => 'Ivermectina veterinaria',
+            'need'         => 'sanidad',
+            'tier'         => 'B',
+            'whatsappText' => 'Hola, quiero cotizar ivermectina de uso veterinario.',
+            'nextStep'     => [
+                'Contanos la especie y cuántos animales vas a tratar.',
+                'Decinos la presentación que buscás (inyectable, pour-on u oral).',
+            ],
+            'crmTag'       => 'ivermectina',
+            'nextLink'     => ['path' => '/guias/ivermectina-en-animales/', 'label' => 'Qué es la ivermectina veterinaria'],
+        ],
+        'antibioticos-veterinarios' => [
+            'menuLabel'    => 'Antibióticos veterinarios',
+            'need'         => 'sanidad',
+            'tier'         => 'B',
+            'whatsappText' => 'Hola, quiero cotizar antibióticos veterinarios.',
+            'nextStep'     => [
+                'Tené a mano la receta del veterinario: los antibióticos se venden solo con receta.',
+                'Contanos la especie y la cantidad de animales.',
+            ],
+            'crmTag'       => 'antibioticos-veterinarios',
+            'nextLink'     => null,
+        ],
+        'sal-mineral' => [
+            'menuLabel'    => 'Sal mineral',
+            'need'         => 'nutricion',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar sal mineral para ganado.',
+            'nextStep'     => [
+                'Contanos cuántas cabezas tenés y si son de cría, recría o engorde.',
+                'Decinos cuántas bolsas y a qué localidad hay que enviarlas.',
+            ],
+            'crmTag'       => 'sal-mineral',
+            'nextLink'     => ['path' => '/guias/sal-mineral-para-ganado/', 'label' => 'Cuánta sal mineral consume el ganado'],
+        ],
+        'balanceados' => [
+            'menuLabel'    => 'Balanceado para animales',
+            'need'         => 'nutricion',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar balanceado para animales.',
+            'nextStep'     => [
+                'Contanos la especie (cerdos, gallinas, bovinos) y la cantidad de bolsas.',
+                'Decinos a qué localidad hay que enviarlo.',
+            ],
+            'crmTag'       => 'balanceados',
+            'nextLink'     => null,
+        ],
+        'alimento-para-mascotas' => [
+            'menuLabel'    => 'Alimento para perros y gatos',
+            'need'         => 'mascotas',
+            'tier'         => 'C',
+            'whatsappText' => 'Hola, quiero cotizar alimento para perros y gatos.',
+            'nextStep'     => [
+                'Decinos la marca o el tipo de alimento, y la edad y el tamaño de tu mascota.',
+                'Contanos cuántas bolsas y a qué localidad.',
+            ],
+            'crmTag'       => 'alimento-para-mascotas',
+            'nextLink'     => null,
+        ],
+        'alambre' => [
+            'menuLabel'    => 'Alambre',
+            'need'         => 'campo',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar alambre.',
+            'nextStep'     => [
+                'Contanos el tipo (púas, liso, galvanizado) y cuántos rollos o metros.',
+                'Si todavía no sabés cuánto necesitás, usá la calculadora de alambrado.',
+            ],
+            'crmTag'       => 'alambre',
+            'nextLink'     => ['path' => '/herramientas/calculadora-de-alambrado/', 'label' => 'Calculá cuánto alambre necesitás'],
+        ],
+        'tejido-de-alambre' => [
+            'menuLabel'    => 'Tejido de alambre',
+            'need'         => 'campo',
+            'tier'         => 'B',
+            'whatsappText' => 'Hola, quiero cotizar tejido de alambre.',
+            'nextStep'     => [
+                'Contanos la altura del tejido y cuántos metros necesitás.',
+                'Decinos a qué localidad hay que enviarlo.',
+            ],
+            'crmTag'       => 'tejido-de-alambre',
+            'nextLink'     => null,
+        ],
+        'glifosato' => [
+            'menuLabel'    => 'Glifosato',
+            'need'         => 'campo',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar glifosato.',
+            'nextStep'     => [
+                'Contanos cuántos litros o cuántas hectáreas vas a aplicar.',
+                'Decinos a qué localidad hay que enviarlo.',
+            ],
+            'crmTag'       => 'glifosato',
+            'nextLink'     => ['path' => '/guias/control-de-malezas-en-pasturas/', 'label' => 'Control de malezas en pasturas'],
+        ],
+        'herbicidas' => [
+            'menuLabel'    => 'Herbicidas',
+            'need'         => 'campo',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar herbicidas.',
+            'nextStep'     => [
+                'Contanos qué malezas querés controlar y en qué cultivo o pastura.',
+                'Decinos cuántas hectáreas y a qué localidad.',
+            ],
+            'crmTag'       => 'herbicidas',
+            'nextLink'     => ['path' => '/guias/control-de-malezas-en-pasturas/', 'label' => 'Control de malezas en pasturas'],
+        ],
+        'fertilizantes' => [
+            'menuLabel'    => 'Fertilizantes',
+            'need'         => 'campo',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar fertilizantes.',
+            'nextStep'     => [
+                'Contanos el cultivo o la pastura y cuántas hectáreas.',
+                'Si tenés un análisis de suelo, mandanos una foto.',
+            ],
+            'crmTag'       => 'fertilizantes',
+            'nextLink'     => ['path' => '/herramientas/calculadora-de-fertilizante/', 'label' => 'Calculá cuántas bolsas necesitás'],
+        ],
+        'semillas' => [
+            'menuLabel'    => 'Semillas',
+            'need'         => 'campo',
+            'tier'         => 'B',
+            'whatsappText' => 'Hola, quiero cotizar semillas.',
+            'nextStep'     => [
+                'Contanos qué especie o variedad buscás y cuántas hectáreas vas a sembrar.',
+                'Decinos a qué localidad hay que enviarlas.',
+            ],
+            'crmTag'       => 'semillas',
+            'nextLink'     => null,
+        ],
+        'bebederos' => [
+            'menuLabel'    => 'Bebederos',
+            'need'         => 'campo',
+            'tier'         => 'C',
+            'whatsappText' => 'Hola, quiero cotizar bebederos para animales.',
+            'nextStep'     => [
+                'Contanos para qué animales y cuántos bebederos necesitás.',
+                'Decinos a qué localidad hay que enviarlos.',
+            ],
+            'crmTag'       => 'bebederos',
+            'nextLink'     => null,
+        ],
+        'veterinaria' => [
+            'menuLabel'    => 'Atención veterinaria',
+            'need'         => 'veterinario',
+            'tier'         => 'B',
+            'whatsappText' => 'Hola, quiero cotizar atención veterinaria.',
+            'nextStep'     => [
+                'Contanos qué animal es, qué síntomas tiene y en qué ciudad estás.',
+                'Si es una emergencia grave, acudí ya a la clínica veterinaria más cercana.',
+            ],
+            'crmTag'       => 'veterinaria',
+            'nextLink'     => null,
+        ],
+        'veterinario-a-domicilio' => [
+            'menuLabel'    => 'Veterinario a domicilio',
+            'need'         => 'veterinario',
+            'tier'         => 'B',
+            'whatsappText' => 'Hola, quiero cotizar un veterinario a domicilio.',
+            'nextStep'     => [
+                'Contanos qué animal es, qué necesita y tu dirección o barrio.',
+                'Decinos qué días y horarios te quedan bien.',
+            ],
+            'crmTag'       => 'veterinario-a-domicilio',
+            'nextLink'     => null,
+        ],
+        'veterinario-rural' => [
+            'menuLabel'    => 'Veterinario para grandes animales',
+            'need'         => 'veterinario',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar un veterinario para grandes animales.',
+            'nextStep'     => [
+                'Contanos la especie, cuántos animales y el trabajo (vacunación, revisión, sangrado, etc.).',
+                'Decinos el departamento y la localidad del establecimiento.',
+            ],
+            'crmTag'       => 'veterinario-rural',
             'nextLink'     => null,
         ],
     ],
 
-    /* One record per chip in content/ui.php 'needs'. A lead from a page with no
-       service of its own takes the tier of the chip the visitor picked, and
-       borrows that chip's service copy when it names one. */
+    'tools' => [
+        'calculadora-alambrado' => [
+            'menuLabel'    => 'Calculadora de alambrado',
+            'need'         => 'campo',
+            'tier'         => 'C',
+            'whatsappText' => 'Hola, usé la calculadora de alambrado y quiero cotizar el alambre.',
+            'nextStep'     => [
+                'Guardá el resultado: con los metros y los hilos te cotizamos los rollos.',
+                'Decinos a qué localidad hay que enviarlo.',
+            ],
+            'crmTag'       => 'calculadora-alambrado',
+            'nextLink'     => null,
+        ],
+        'calculadora-fertilizante' => [
+            'menuLabel'    => 'Calculadora de fertilizante',
+            'need'         => 'campo',
+            'tier'         => 'C',
+            'whatsappText' => 'Hola, usé la calculadora de fertilizante y quiero cotizar las bolsas.',
+            'nextStep'     => [
+                'Guardá el resultado: con las bolsas y el producto te cotizamos.',
+                'Decinos a qué localidad hay que enviarlo.',
+            ],
+            'crmTag'       => 'calculadora-fertilizante',
+            'nextLink'     => null,
+        ],
+    ],
+
     'needs' => [
-        'servicio' => ['tier' => 'B', 'crmTag' => 'servicio-puntual', 'service' => 'servicio-ejemplo'],
-        'mensual'  => ['tier' => 'A', 'crmTag' => 'trabajo-mensual',  'service' => 'servicio-ejemplo'],
-        'otro'     => ['tier' => 'C', 'crmTag' => 'consulta-general', 'service' => null],
+        'sanidad'     => ['tier' => 'B', 'crmTag' => 'sanidad-animal',   'service' => 'antiparasitarios-para-ganado'],
+        'nutricion'   => ['tier' => 'A', 'crmTag' => 'nutricion-animal', 'service' => 'sal-mineral'],
+        'mascotas'    => ['tier' => 'C', 'crmTag' => 'mascotas',         'service' => 'antiparasitarios-para-perros'],
+        'campo'       => ['tier' => 'A', 'crmTag' => 'campo',            'service' => 'alambre'],
+        'veterinario' => ['tier' => 'B', 'crmTag' => 'veterinario',      'service' => 'veterinaria'],
+        'otro'        => ['tier' => 'C', 'crmTag' => 'consulta-general', 'service' => null],
     ],
 ];
