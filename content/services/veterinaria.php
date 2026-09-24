@@ -118,7 +118,7 @@ return [
     ],
     'cta'       => ['label' => 'Buscar atención veterinaria', 'whatsappText' => ''],
     'related'   => ['veterinario-a-domicilio', 'veterinario-rural', 'antiparasitarios-para-perros'],
-    'guides'    => ['cada-cuanto-desparasitar'],
+    'guides'    => ['cada-cuanto-desparasitar', 'vacuna-antirrabica', 'sarna-en-perros'],
     'articles'  => [],
     'toolLinks' => [],
 ];

@@ -6,13 +6,13 @@ return [
     'path'            => '/guias/pulgas-y-garrapatas-en-perros/',
     'title'           => 'Pulgas y garrapatas en perros',
     'navLabel'        => 'Pulgas y garrapatas en perros',
-    'seoTitle'        => 'Pulgas y garrapatas en perros: guía',
+    'seoTitle'        => 'Remedio para garrapatas en perros',
     'metaDescription' => 'Pulgas y garrapatas en perros: señales, pipeta, collar o comprimido, y '
                        . 'cuándo ir al veterinario. Cotizá el antipulgas sin costo ni compromiso.',
     'lastReviewed'    => '2026-09-24',
     'hero' => [
         'eyebrow' => 'Guías',
-        'h1'      => 'Pulgas y garrapatas en perros: qué hacer',
+        'h1'      => 'Remedio para garrapatas y pulgas en perros: qué hacer',
         'lead'    => 'Cómo detectarlas a tiempo, elegir entre pipeta, collar o comprimido, y por '
                    . 'qué el producto de perro nunca va en el gato.',
     ],

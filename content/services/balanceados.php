@@ -111,7 +111,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar balanceado', 'whatsappText' => ''],
     'related'   => ['sal-mineral', 'alimento-para-mascotas', 'antiparasitarios-para-ganado'],
-    'guides'    => [],
+    'guides'    => ['gallinas-ponedoras'],
     'articles'  => [],
     'toolLinks' => [],
 ];

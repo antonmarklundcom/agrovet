@@ -104,7 +104,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar mochila fumigadora', 'whatsappText' => ''],
     'related'   => ['insecticidas', 'herbicidas', 'glifosato'],
-    'guides'    => [],
+    'guides'    => ['cipermetrina'],
     'articles'  => [],
     'toolLinks' => [],
 ];

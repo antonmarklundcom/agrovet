@@ -8,7 +8,7 @@ return [
     'navLabel'        => 'Semillas',
     'cluster'         => 'campo',
     'parent'          => null,
-    'seoTitle'        => 'Semillas de pasturas y forrajeras',
+    'seoTitle'        => 'Semillas de brachiaria y pasturas',
     'metaDescription' => 'Semillas de brachiaria, mombaza, gatton panic, maíz y sorgo forrajero, y '
                        . 'semillas de huerta. Cotizá por WhatsApp sin costo y recibilas en todo Paraguay.',
     'hero' => [
@@ -107,7 +107,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar semillas', 'whatsappText' => ''],
     'related'   => ['sal-mineral', 'fertilizantes', 'balanceados'],
-    'guides'    => [],
+    'guides'    => ['brachiaria-brizantha'],
     'articles'  => [],
     'toolLinks' => [
         [

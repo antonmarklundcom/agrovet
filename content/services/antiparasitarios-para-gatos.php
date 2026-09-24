@@ -107,7 +107,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar antiparasitario para gatos', 'whatsappText' => ''],
     'related'   => ['antiparasitarios-para-perros', 'ivermectina', 'alimento-para-mascotas'],
-    'guides'    => ['cada-cuanto-desparasitar'],
+    'guides'    => ['cada-cuanto-desparasitar', 'sarna-en-gatos'],
     'articles'  => [],
     'toolLinks' => [],
 ];
