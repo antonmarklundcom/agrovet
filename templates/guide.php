@@ -49,7 +49,10 @@ $howTo = [
     'step'        => $howToSteps,
 ];
 
+$heroImg = image_for('guias', $slug ?? '');
+
 $page = [
+    'ogImage'     => image_og_path($heroImg) ?? '/assets/img/og-default.png',
     'title'       => $guide['seoTitle'] !== '' ? $guide['seoTitle'] : $guide['title'],
     'description' => $guide['metaDescription'],
     'path'        => $guide['path'],
@@ -67,7 +70,7 @@ require ROOT_DIR . '/partials/header.php';
 ?>
 <main id="main">
 
-  <section class="page-hero">
+  <section class="page-hero<?= $heroImg !== null ? ' page-hero--media' : '' ?>">
     <div class="container">
       <?php require ROOT_DIR . '/partials/breadcrumbs.php'; ?>
       <div class="page-hero__inner">
@@ -75,6 +78,11 @@ require ROOT_DIR . '/partials/header.php';
         <h1><?= e($guide['hero']['h1']) ?></h1>
         <p class="lead"><?= e($guide['hero']['lead']) ?></p>
       </div>
+      <?php if ($heroImg !== null): ?>
+        <div class="page-hero__media">
+          <?= picture($heroImg, 'page-hero__picture', '(min-width: 1024px) 40vw, 100vw', 1280, 960, true) ?>
+        </div>
+      <?php endif; ?>
     </div>
   </section>
 

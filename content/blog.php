@@ -19,5 +19,12 @@
 
 declare(strict_types=1);
 
-// None yet: the blog and segment pages are later phases.
-return [];
+/* One file per article index record in content/blog/<slug>.php (the file name is
+   the slug), newest first. The body lives in /blog/<slug>/index.php. */
+$records = [];
+foreach (glob(__DIR__ . '/blog/*.php') ?: [] as $file) {
+    $records[] = require $file;
+}
+usort($records, static fn (array $a, array $b): int => [$b['date'], $b['slug']] <=> [$a['date'], $a['slug']]);
+
+return $records;

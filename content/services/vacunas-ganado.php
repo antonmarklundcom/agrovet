@@ -117,6 +117,6 @@ return [
     'cta'       => ['label' => 'Cotizar vacunas', 'whatsappText' => ''],
     'related'   => ['antiparasitarios-para-ganado', 'sal-mineral', 'veterinario-rural'],
     'guides'    => ['calendario-sanitario-bovino'],
-    'articles'  => [],
+    'articles'  => ['preparar-hacienda-para-vacunacion'],
     'toolLinks' => [],
 ];

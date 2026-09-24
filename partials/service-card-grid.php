@@ -44,6 +44,7 @@ if ($gridCards === null) {
             'text'  => $gridService['metaDescription'],
             'path'  => $gridService['path'],
             'links' => [],
+            'image' => image_for('services', $gridSlug),
         ];
     }
 }
@@ -55,7 +56,8 @@ $gridN = $gridStart;
     <?php $gridLinks = $gridCard['links'] ?? []; ?>
 
     <?php if ($gridLinks === []): ?>
-      <a class="card card--link" href="<?= e($gridCard['path']) ?>">
+      <a class="card card--link<?= !empty($gridCard['image']) ? ' card--media' : '' ?>" href="<?= e($gridCard['path']) ?>">
+        <?= picture($gridCard['image'] ?? null, 'card__media', '(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw', 1280, 960) ?>
         <?php if ($gridNumbered): ?>
           <span class="card__num" aria-hidden="true"><?= e(str_pad((string) $gridN++, 2, '0', STR_PAD_LEFT)) ?></span>
         <?php endif; ?>

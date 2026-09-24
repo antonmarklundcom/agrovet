@@ -61,6 +61,7 @@ return [
     'firm' => array_merge(
         [
             ['label' => ui('nav.guides'),   'path' => '/guias/'],
+            ['label' => ui('nav.blog'),     'path' => '/blog/'],
             ['label' => ui('nav.shipping'), 'path' => '/envios/'],
             ['label' => ui('nav.contact'),  'path' => '/contacto/'],
         ],
