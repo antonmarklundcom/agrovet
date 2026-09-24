@@ -68,6 +68,12 @@ foreach ([
     '/templates/service.php',
     '/config.example.php',
     '/logs/leads.log',
+    '/research/kwp.csv',
+    '/docs/ROADMAP.md',
+    '/CLAUDE.md',
+    '/README.md',
+    '/verify.sh',
+    '/router.php',
 ] as $path) {
     $routes[$path] = 404;
 }

@@ -20,6 +20,16 @@ DirectoryIndex index.php index.html
   #   RewriteRule ^$ /privacidad/? [R=301,L]
   #   RewriteRule ^wp-sitemap\.xml$ /sitemap.xml [R=301,L]
 
+  # --- canonical host ------------------------------------------------------
+  # https://agroveterinaria.com.py only: www and plain http 301 there once. Scoped
+  # to the real hostname so a Hostinger preview domain is never redirected, which
+  # is also why router.php has no mirror of this block.
+  RewriteCond %{HTTP_HOST} ^www\.agroveterinaria\.com\.py$ [NC]
+  RewriteRule ^ https://agroveterinaria.com.py%{REQUEST_URI} [R=301,L]
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} ^agroveterinaria\.com\.py$ [NC]
+  RewriteRule ^ https://agroveterinaria.com.py%{REQUEST_URI} [R=301,L]
+
   # --- generated text endpoints -------------------------------------------
   RewriteRule ^sitemap\.xml$ /sitemap.php [L]
   RewriteRule ^robots\.txt$  /robots.php  [L]
@@ -34,7 +44,8 @@ DirectoryIndex index.php index.html
 ErrorDocument 404 /404.php
 
 # --- keep the application's internals off the web ------------------------
-RedirectMatch 404 ^/(content|lib|partials|templates|docs|prompts|tests|deploy)(/|$)
+RedirectMatch 404 ^/(content|lib|partials|templates|docs|prompts|tests|deploy|research|dist)(/|$)
+RedirectMatch 404 ^/router\.php$
 RedirectMatch 404 ^/logs(/|$)
 RedirectMatch 404 ^/\.git(/|$)
 
@@ -42,7 +53,7 @@ RedirectMatch 404 ^/\.git(/|$)
   Require all denied
 </FilesMatch>
 
-<FilesMatch "\.(md|sh|json|lock|ya?ml|log|dc\.html)$">
+<FilesMatch "\.(md|sh|json|lock|ya?ml|log|csv|dc\.html)$">
   Require all denied
 </FilesMatch>
 

@@ -275,7 +275,7 @@ return [
         'benefits'     => 'Por qué pedir acá',
         'faq'          => 'Preguntas frecuentes',
         'related'      => 'Productos relacionados',
-        'guides'       => 'Guía relacionada',
+        'guides'       => 'Guías relacionadas',
         'articles'     => 'Artículo relacionado',
         'form_eyebrow' => 'Cotización',
         'form_lead'    => 'Dejanos tus datos y la lista de productos: te respondemos con precio y envío, '

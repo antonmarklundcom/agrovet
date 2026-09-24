@@ -51,10 +51,11 @@ if ($path === '/robots.txt') {
 }
 
 // --- denied directories and files ------------------------------------------
-if (preg_match('#^/(content|lib|partials|templates|docs|prompts|tests|deploy|logs)(/|$)#', $path)
+if (preg_match('#^/(content|lib|partials|templates|docs|prompts|tests|deploy|logs|research|dist)(/|$)#', $path)
     || preg_match('#^/\.#', $path)
     || preg_match('#^/config(\.example)?\.php$#', $path)
-    || preg_match('#\.(md|sh|json|lock|ya?ml|log)$#', $path)
+    || $path === '/router.php'
+    || preg_match('#\.(md|sh|json|lock|ya?ml|log|csv)$#', $path)
 ) {
     $halt(404, '<h1>404 Not Found</h1>');
     return true;

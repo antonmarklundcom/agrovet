@@ -118,7 +118,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar fertilizante', 'whatsappText' => ''],
     'related'   => ['semillas', 'herbicidas', 'glifosato'],
-    'guides'    => [],
+    'guides'    => ['sulfato-de-amonio', 'nitrato-de-calcio', 'humus-de-lombriz'],
     'articles'  => [],
     'toolLinks' => [
         [

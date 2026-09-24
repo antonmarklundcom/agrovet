@@ -107,7 +107,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar antibióticos veterinarios', 'whatsappText' => ''],
     'related'   => ['ivermectina', 'antiparasitarios-para-ganado', 'veterinario-a-domicilio'],
-    'guides'    => [],
+    'guides'    => ['terramicina-veterinaria'],
     'articles'  => [],
     'toolLinks' => [],
 ];
