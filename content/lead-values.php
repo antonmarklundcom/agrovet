@@ -304,6 +304,18 @@ return [
     ],
 
     'tools' => [
+        'arma-tu-pedido' => [
+            'menuLabel'    => 'Pedido armado',
+            'need'         => 'otro',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar un pedido de productos.',
+            'nextStep'     => [
+                'Te respondemos por WhatsApp con disponibilidad, precio y envío de cada producto.',
+                'Si falta algo en la lista, agregalo en el mismo chat.',
+            ],
+            'crmTag'       => 'arma-tu-pedido',
+            'nextLink'     => null,
+        ],
         'calculadora-alambrado' => [
             'menuLabel'    => 'Calculadora de alambrado',
             'need'         => 'campo',

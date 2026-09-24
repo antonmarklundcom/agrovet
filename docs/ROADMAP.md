@@ -39,6 +39,16 @@
 | 6 guides | ivermectina para qué sirve 1.300 (animals only), curabichera, desparasitar, alambre, malezas, sal mineral |
 | 2 calculators | alambrado (metres and rolls), fertilizante (bags per hectare) |
 
+## v1.1 (added)
+
+- Species hubs: `/bovinos/`, `/mascotas/`, `/aves/`, `/porcinos/`, `/equinos/`.
+- Delivery: `/envios/` plus `/envios/san-pedro/` (1.000), `/envios/asuncion/` (390),
+  `/envios/san-lorenzo/` (260), each stating that the store is online.
+- "Armá tu pedido" order list at `/herramientas/arma-tu-pedido/` (sends one WhatsApp message), linked from the header.
+- Guides: sulfato de amonio 320, humus de lombriz 320, nitrato de calcio 260, Tordon 260,
+  alambre dulce 390, terramicina 170.
+- Homepage FAQ (FAQPage JSON-LD) for "agroveterinaria online / cerca de mí".
+
 ## Next
 
 1. **Keyword Planner round 2** for groups the first export did not cover: flea and tick
@@ -46,17 +56,13 @@
    poultry, pasture seeds by name. Seeds are in the chat.
 2. **Images:** Higgsfield (model and settings chosen by Anton). Every product page has
    an image slot waiting. Also replace `assets/img/og-default.png`.
-3. **Homepage v2:** the AGRO FIELD layout from the old recon (split hero, order list,
-   cold-chain section).
-4. **Order list** ("armá tu pedido"): pick products and quantities, send one WhatsApp
-   message and one CRM lead. Build it in php-site-template so other store sites get it.
-5. **Department pages** for the top towns (San Pedro 1.000, Asunción 390, San Lorenzo 260),
-   but only once there is real delivery or partner coverage to describe. Thin
-   location pages hurt.
-6. **Species hubs** (`/bovinos/`, `/mascotas/`, `/aves/`, `/porcinos/`, `/equinos/`) using
-   the segment template.
-7. **Blog:** seasonal topics (bichera season, dry-season supplements, vaccination campaigns).
-8. **Off-site:** Google Search Console, a sitemap submission, and a Google Business Profile
+3. **Homepage v2:** the AGRO FIELD layout from the old recon (split hero, cold-chain section).
+4. **Order list in the template:** move "armá tu pedido" into php-site-template once it has
+   produced real leads here.
+5. **More delivery pages** only where Search Console shows impressions (e.g. Chaco,
+   Itapúa, Caaguazú). Thin copies of a location page hurt.
+6. **Blog:** seasonal topics (bichera season, dry-season supplements, vaccination campaigns).
+7. **Off-site:** Google Search Console, a sitemap submission, and a Google Business Profile
    once a partner with an address exists.
-9. **Sales:** once lead volume proves demand, add a catalogue with prices and online
+8. **Sales:** once lead volume proves demand, add a catalogue with prices and online
    payment as a separate shop app (e.g. `tienda.agroveterinaria.com.py`).

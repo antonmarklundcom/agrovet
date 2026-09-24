@@ -14,7 +14,8 @@ README.md explains the template; this file lists what is specific to this site.
   antibiotics only with a prescription; vet pages point serious emergencies to
   the nearest clinic.
 - **One file per record:** product/service pages live in `content/services/<slug>.php`,
-  guides in `content/guias/<slug>.php`, tools in `content/tools/<slug>.php`. The
+  guides in `content/guias/<slug>.php`, tools in `content/tools/<slug>.php`,
+  species hubs and delivery pages in `content/segmentos/<slug>.php`. The
   matching `content/<type>.php` globs them. Every service and tool slug needs a
   record in `content/lead-values.php`.
 - **Hub:** products live under `/productos/` (`servicesHub` in `content/site.php`);

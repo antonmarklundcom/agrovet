@@ -49,6 +49,8 @@ return [
         'skip'         => 'Ir al contenido principal',
         'firm'         => 'Agroveterinaria',
         'all_services' => 'Ver todos los productos',
+        'order'        => 'Armá tu pedido',
+        'shipping'     => 'Envíos',
     ],
 
     'cta' => [
@@ -86,6 +88,39 @@ return [
 
         'unsure_title' => '¿No encontrás lo que buscás?',
         'unsure_text'  => 'Mandanos el nombre del producto o una foto de la etiqueta y lo buscamos por vos.',
+    ],
+
+    // Homepage FAQ: rendered above the contact block and emitted as FAQPage JSON-LD.
+    'home_faq_title' => 'Preguntas frecuentes sobre la agroveterinaria online',
+    'home_faq' => [
+        [
+            'q' => '¿Qué es una agroveterinaria online?',
+            'a' => 'Es una agroveterinaria que atiende por WhatsApp y por internet en vez de mostrador: '
+                 . 'nos mandás la lista de productos veterinarios o agropecuarios, te cotizamos con el '
+                 . 'envío incluido y te lo despachamos a tu localidad.',
+        ],
+        [
+            'q' => '¿Hay una agroveterinaria cerca de mí?',
+            'a' => 'No tenemos local a la calle: enviamos a los 17 departamentos y Asunción. Si necesitás '
+                 . 'el producto hoy mismo, una agroveterinaria de tu zona es lo más rápido; si podés '
+                 . 'esperar el envío, te cotizamos sin costo y comparás.',
+        ],
+        [
+            'q' => '¿Cómo pido una cotización?',
+            'a' => 'Escribinos por WhatsApp o usá "Armá tu pedido": elegís los productos, ponés las '
+                 . 'cantidades y la localidad, y te respondemos con precio y costo de envío.',
+        ],
+        [
+            'q' => '¿Venden medicamentos veterinarios con receta?',
+            'a' => 'Sí, pero los productos de venta bajo receta, como los antibióticos, se despachan '
+                 . 'solo contra receta de un veterinario matriculado.',
+        ],
+        [
+            'q' => '¿Qué productos puedo pedir?',
+            'a' => 'Curabicheras, antiparasitarios para ganado y mascotas, ivermectina veterinaria, sal '
+                 . 'mineral, balanceados, alimento para perros y gatos, alambres, tejidos, herbicidas, '
+                 . 'fertilizantes, semillas y bebederos. Si buscás otro producto, mandanos el nombre.',
+        ],
     ],
 
     // The panel at the foot of the homepage hero: an ILLUSTRATION of a quote
@@ -149,11 +184,11 @@ return [
         'title'   => 'Para ganaderos, productores y dueños de mascotas',
         'lead'    => 'Productos para cada especie y cada tarea del campo.',
         'items'   => [
-            'Bovinos de carne y leche',
-            'Porcinos',
-            'Aves de postura y engorde',
-            'Equinos',
-            'Perros y gatos',
+            ['label' => 'Bovinos de carne y leche', 'path' => '/bovinos/'],
+            ['label' => 'Porcinos',                 'path' => '/porcinos/'],
+            ['label' => 'Aves de postura y engorde', 'path' => '/aves/'],
+            ['label' => 'Equinos',                  'path' => '/equinos/'],
+            ['label' => 'Perros y gatos',           'path' => '/mascotas/'],
             'Chacras y huertas',
         ],
     ],

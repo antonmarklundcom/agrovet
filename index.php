@@ -18,6 +18,7 @@ $page = [
     'title'       => $meta['title'],
     'description' => $meta['description'],
     'path'        => '/',
+    'faq'         => content('ui')['home_faq'],
 ];
 
 /* Only real, confirmed figures reach the hero. Anything without a value and a
@@ -182,6 +183,18 @@ require ROOT_DIR . '/partials/header.php';
   <?php else: ?>
     <?php require ROOT_DIR . '/partials/industries.php'; ?>
   <?php endif; ?>
+
+  <!-- Preguntas frecuentes --------------------------------------------- -->
+  <section class="section section--surface">
+    <div class="container">
+      <?php
+        $faqItems = content('ui')['home_faq'];
+        $faqTitle = ui('home_faq_title');
+        require ROOT_DIR . '/partials/faq.php';
+        unset($faqItems, $faqTitle);
+      ?>
+    </div>
+  </section>
 
   <!-- Contacto ---------------------------------------------------------- -->
   <section class="section" id="contacto">

@@ -44,8 +44,10 @@ return [
     // Header bar, left to right. 'mega' opens the services panel.
     'primary' => [
         ['label' => ui('nav.services'), 'path' => services_hub_path(), 'mega' => true],
+        ['label' => ui('nav.order'),    'path' => '/herramientas/arma-tu-pedido/'],
         ['label' => ui('nav.tools'),    'path' => '/herramientas/'],
         ['label' => ui('nav.guides'),   'path' => '/guias/'],
+        ['label' => ui('nav.shipping'), 'path' => '/envios/'],
         ['label' => ui('nav.contact'),  'path' => '/contacto/'],
     ],
 
@@ -56,10 +58,18 @@ return [
     'services' => $allServices,
 
     // Footer column 3. Tools are appended from the 'tools' key below.
-    'firm' => [
-        ['label' => ui('nav.guides'),  'path' => '/guias/'],
-        ['label' => ui('nav.contact'), 'path' => '/contacto/'],
-    ],
+    'firm' => array_merge(
+        [
+            ['label' => ui('nav.guides'),   'path' => '/guias/'],
+            ['label' => ui('nav.shipping'), 'path' => '/envios/'],
+            ['label' => ui('nav.contact'),  'path' => '/contacto/'],
+        ],
+        // Species hubs and delivery pages, from content/segmentos/.
+        array_values(array_map(
+            static fn (array $seg): array => ['label' => $seg['navLabel'], 'path' => $seg['path']],
+            content('segmentos')
+        ))
+    ),
 
     // One entry per content/tools.php record, in the same order.
     'tools' => array_map(

@@ -33,5 +33,13 @@
 
 declare(strict_types=1);
 
-// None yet: the blog and segment pages are later phases.
-return [];
+/* Species hubs and delivery pages. One file per record in content/segmentos/<slug>.php;
+   the file name is the slug; records sort by optional 'order' (default 100). */
+$records = [];
+foreach (glob(__DIR__ . '/segmentos/*.php') ?: [] as $file) {
+    $records[basename($file, '.php')] = require $file;
+}
+uksort($records, static fn (string $a, string $b): int =>
+    [($records[$a]['order'] ?? 100), $a] <=> [($records[$b]['order'] ?? 100), $b]);
+
+return $records;
