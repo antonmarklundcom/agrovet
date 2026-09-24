@@ -49,6 +49,15 @@
   alambre dulce 390, terramicina 170.
 - Homepage FAQ (FAQPage JSON-LD) for "agroveterinaria online / cerca de mí".
 
+## v1.2 (added, no keyword data yet)
+
+- Products: antipulgas (perros y gatos), garrapaticida para ganado, vacunas para ganado,
+  vitaminas, jeringas y dosificadores, raticidas, insecticidas y hormiguicidas, mochilas fumigadoras.
+- Guides: calendario sanitario bovino, garrapata en bovinos, pulgas y garrapatas en perros,
+  doramectina, albendazol veterinario, ratas en el galpón, hormigas cortadoras.
+- `docs/DEPLOY.md`: Hostinger Git and zip deploy, config.php, SSL, Search Console.
+- Keyword round 2 will tune these pages' titles once the data exists.
+
 ## Next
 
 1. **Keyword Planner round 2** for groups the first export did not cover: flea and tick

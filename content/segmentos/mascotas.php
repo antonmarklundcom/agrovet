@@ -23,8 +23,8 @@ return [
     ],
     'leadSlug' => 'alimento-para-mascotas',
     'bundle'   => [
-        'antiparasitarios-para-perros', 'antiparasitarios-para-gatos', 'alimento-para-mascotas',
-        'antibioticos-veterinarios', 'veterinaria', 'veterinario-a-domicilio',
+        'antipulgas', 'antiparasitarios-para-perros', 'antiparasitarios-para-gatos',
+        'alimento-para-mascotas', 'veterinaria', 'veterinario-a-domicilio',
     ],
     'traps' => [
         [

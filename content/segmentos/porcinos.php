@@ -23,8 +23,8 @@ return [
     ],
     'leadSlug' => 'balanceados',
     'bundle'   => [
-        'balanceados', 'antiparasitarios-para-ganado', 'bebederos',
-        'antibioticos-veterinarios', 'veterinario-rural',
+        'balanceados', 'antiparasitarios-para-ganado', 'bebederos', 'vitaminas',
+        'raticidas', 'veterinario-rural',
     ],
     'traps' => [
         [

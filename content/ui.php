@@ -25,9 +25,9 @@ return [
 
     // One line under each cluster heading on the products hub.
     'cluster_leads' => [
-        'sanidad'     => 'Antiparasitarios, curabicheras y medicamentos de uso veterinario, para ganado y mascotas.',
+        'sanidad'     => 'Antiparasitarios, garrapaticidas, antipulgas, vacunas, curabicheras y medicamentos de uso veterinario.',
         'nutricion'   => 'Sal mineral, balanceados y alimento para perros y gatos.',
-        'campo'       => 'Alambres, tejidos, herbicidas, fertilizantes, semillas y bebederos.',
+        'campo'       => 'Alambres, tejidos, herbicidas, fertilizantes, semillas, raticidas, insecticidas y fumigadoras.',
         'veterinaria' => 'Consultas para mascotas y atención de grandes animales en el campo.',
     ],
 
@@ -117,9 +117,10 @@ return [
         ],
         [
             'q' => '¿Qué productos puedo pedir?',
-            'a' => 'Curabicheras, antiparasitarios para ganado y mascotas, ivermectina veterinaria, sal '
-                 . 'mineral, balanceados, alimento para perros y gatos, alambres, tejidos, herbicidas, '
-                 . 'fertilizantes, semillas y bebederos. Si buscás otro producto, mandanos el nombre.',
+            'a' => 'Curabicheras, antiparasitarios, garrapaticidas, antipulgas, vacunas y vitaminas para '
+                 . 'ganado y mascotas, sal mineral, balanceados, alimento para perros y gatos, alambres, '
+                 . 'tejidos, herbicidas, fertilizantes, semillas, raticidas, insecticidas, fumigadoras y '
+                 . 'bebederos. Si buscás otro producto, mandanos el nombre.',
         ],
     ],
 

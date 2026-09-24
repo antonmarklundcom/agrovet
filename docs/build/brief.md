@@ -64,11 +64,14 @@ Product/service slugs (for `related`, 2–3 each):
 curabichera, antiparasitarios-para-perros, antiparasitarios-para-gatos,
 antiparasitarios-para-ganado, ivermectina, antibioticos-veterinarios, sal-mineral, balanceados,
 alimento-para-mascotas, alambre, tejido-de-alambre, glifosato, herbicidas, fertilizantes,
-semillas, bebederos, veterinaria, veterinario-a-domicilio, veterinario-rural
+semillas, bebederos, veterinaria, veterinario-a-domicilio, veterinario-rural, antipulgas,
+garrapaticidas, vacunas-ganado, vitaminas, jeringas, raticidas, insecticidas, fumigadoras
 
 Guide slugs (for `guides`, 0–1 each): como-usar-curabichera, cada-cuanto-desparasitar,
 ivermectina-en-animales, cuanto-alambre-necesito, control-de-malezas-en-pasturas,
-sal-mineral-para-ganado
+sal-mineral-para-ganado, sulfato-de-amonio, humus-de-lombriz, nitrato-de-calcio,
+tordon-herbicida, alambre-dulce, terramicina-veterinaria, calendario-sanitario-bovino, garrapata-en-bovinos,
+pulgas-y-garrapatas-en-perros, doramectina, albendazol-veterinario, como-eliminar-ratas, hormigas-cortadoras
 
 Tool links (for `toolLinks`, only where relevant):
 `/herramientas/calculadora-de-alambrado/` (metros y rollos de alambre para un alambrado),
