@@ -82,3 +82,21 @@ Tool links (for `toolLinks`, only where relevant):
    "Warning", "Notice", "Deprecated" or "Fatal" in the HTML. Kill the server afterwards.
    (Other writers work in parallel; a related slug whose file is not there yet is fine.)
 3. Report: files written, each seoTitle with its length, and any deviation from this brief.
+
+---
+
+## Round 2 — segment pages (species hubs and delivery pages)
+
+Segment records live in `content/segmentos/<slug>.php`, one file each, returning ONE record
+(route files already exist). Rendered by `templates/segment.php` (read it). Exact key set:
+
+`order, path, navLabel, seoTitle (≤ 42 chars), metaDescription (120–155), hero{eyebrow,h1,lead},
+leadSlug, bundle[], traps[{title,text}], sections[{h2,body[],items[{title,text}]}], weNeed[], faq[{q,a}]`
+
+- `leadSlug`: ONE product slug from the valid list — the most valuable product for this page.
+  The page's WhatsApp text, form and CRM tag come from it.
+- `bundle`: 4–8 product slugs from the valid list, shown as cards ("Lo que te conviene tener a mano").
+- `traps`: 3–4 costly mistakes for this audience (renders under "Los errores que más cuestan").
+  No statistics.
+- `sections`: 1–2 blocks. `weNeed`: 3–4 items ("Para cotizarte, contanos"). `faq`: 4–5.
+- Same register, business rules and safety rules as above. Length about 70 % of a product page.

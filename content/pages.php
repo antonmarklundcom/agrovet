@@ -82,6 +82,50 @@ return [
         'priority'    => '0.8',
     ],
 
+    '/envios/' => [
+        'title'       => 'Envíos a todo Paraguay',
+        'description' => 'Cómo funcionan los envíos de productos veterinarios y agropecuarios a los 17 '
+                       . 'departamentos y Asunción: cotización, pago y despacho.',
+        'h1'          => 'Envíos a todo Paraguay',
+        'lead'        => 'Somos una agroveterinaria online: cotizamos por WhatsApp y despachamos a tu localidad.',
+        'sections'    => [
+            [
+                'h2'   => 'Cómo funciona el envío',
+                'body' => [
+                    'Mandanos la lista de productos y la localidad de entrega. En la cotización te '
+                        . 'pasamos el precio de cada producto y el costo de envío por separado, así sabés '
+                        . 'cuánto pagás en total antes de confirmar.',
+                    'Despachamos por transportadora o encomienda al punto que acordemos: tu casa, tu '
+                        . 'estancia, la terminal o la agencia más cercana. El plazo depende de la '
+                        . 'distancia y te lo confirmamos en la cotización.',
+                ],
+            ],
+            [
+                'h2'   => 'A dónde enviamos',
+                'body' => [
+                    'Región Oriental: Concepción, San Pedro, Cordillera, Guairá, Caaguazú, Caazapá, '
+                        . 'Itapúa, Misiones, Paraguarí, Alto Paraná, Central, Ñeembucú, Amambay y '
+                        . 'Canindeyú, además de Asunción.',
+                    'Región Occidental (Chaco): Presidente Hayes, Boquerón y Alto Paraguay. En las '
+                        . 'zonas más alejadas coordinamos el punto de entrega según el transporte '
+                        . 'disponible.',
+                ],
+            ],
+            [
+                'h2'   => 'Productos que requieren cuidado en el envío',
+                'body' => [
+                    'Las vacunas y algunos medicamentos necesitan cadena de frío: solo los enviamos '
+                        . 'cuando el transporte hasta tu localidad la puede mantener, y te lo avisamos en '
+                        . 'la cotización. Los medicamentos de venta bajo receta se despachan contra receta '
+                        . 'de un veterinario matriculado.',
+                ],
+            ],
+        ],
+        'stub'        => false,
+        'changefreq'  => 'monthly',
+        'priority'    => '0.7',
+    ],
+
     '/privacidad/' => [
         'title'       => 'Política de privacidad',
         'description' => 'Cómo tratamos los datos que nos dejás en el formulario o por WhatsApp, y '
