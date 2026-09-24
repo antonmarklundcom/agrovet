@@ -23,7 +23,7 @@ return [
     ],
     'leadSlug' => 'balanceados',
     'bundle'   => [
-        'balanceados', 'bebederos', 'tejido-de-alambre', 'antibioticos-veterinarios',
+        'balanceados', 'bebederos', 'tejido-de-alambre', 'vitaminas', 'raticidas', 'insecticidas',
     ],
     'traps' => [
         [

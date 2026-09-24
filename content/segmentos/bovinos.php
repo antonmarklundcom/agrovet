@@ -23,8 +23,8 @@ return [
     ],
     'leadSlug' => 'sal-mineral',
     'bundle'   => [
-        'antiparasitarios-para-ganado', 'curabichera', 'ivermectina', 'sal-mineral',
-        'balanceados', 'alambre', 'bebederos', 'veterinario-rural',
+        'garrapaticidas', 'vacunas-ganado', 'antiparasitarios-para-ganado', 'curabichera',
+        'sal-mineral', 'vitaminas', 'jeringas', 'veterinario-rural',
     ],
     'traps' => [
         [

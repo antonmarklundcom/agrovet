@@ -73,6 +73,102 @@ return [
     ],
 
     'services' => [
+        'antipulgas' => [
+            'menuLabel'    => 'Antipulgas para perros y gatos',
+            'need'         => 'mascotas',
+            'tier'         => 'C',
+            'whatsappText' => 'Hola, quiero cotizar antipulgas para perros y gatos.',
+            'nextStep'     => [
+                'Contanos el peso de tu mascota y si preferís pipeta, collar o comprimido.',
+                'Decinos a qué localidad hay que enviarlo.',
+            ],
+            'crmTag'       => 'antipulgas',
+            'nextLink'     => ['path' => '/guias/pulgas-y-garrapatas-en-perros/', 'label' => 'Pulgas y garrapatas en perros'],
+        ],
+        'garrapaticidas' => [
+            'menuLabel'    => 'Garrapaticida para ganado',
+            'need'         => 'sanidad',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar garrapaticida para ganado.',
+            'nextStep'     => [
+                'Contanos cuántas cabezas vas a tratar y si usás baño, pour-on o inyectable.',
+                'Si sabés qué producto usaste la última vez, decinos: ayuda a rotar y evitar resistencia.',
+            ],
+            'crmTag'       => 'garrapaticidas',
+            'nextLink'     => ['path' => '/guias/como-controlar-la-garrapata-en-bovinos/', 'label' => 'Cómo controlar la garrapata'],
+        ],
+        'vacunas-ganado' => [
+            'menuLabel'    => 'Vacunas para ganado',
+            'need'         => 'sanidad',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar vacunas para ganado.',
+            'nextStep'     => [
+                'Contanos la especie, cuántos animales y qué vacuna buscás.',
+                'Decinos la localidad: las vacunas viajan con cadena de frío y lo confirmamos en la cotización.',
+            ],
+            'crmTag'       => 'vacunas-ganado',
+            'nextLink'     => ['path' => '/guias/calendario-sanitario-bovino/', 'label' => 'Calendario sanitario bovino'],
+        ],
+        'vitaminas' => [
+            'menuLabel'    => 'Vitaminas y suplementos',
+            'need'         => 'sanidad',
+            'tier'         => 'B',
+            'whatsappText' => 'Hola, quiero cotizar vitaminas y suplementos para animales.',
+            'nextStep'     => [
+                'Contanos la especie, cuántos animales y para qué los necesitás.',
+                'Decinos a qué localidad hay que enviarlos.',
+            ],
+            'crmTag'       => 'vitaminas',
+            'nextLink'     => null,
+        ],
+        'jeringas' => [
+            'menuLabel'    => 'Jeringas y dosificadores',
+            'need'         => 'sanidad',
+            'tier'         => 'C',
+            'whatsappText' => 'Hola, quiero cotizar jeringas y pistolas dosificadoras.',
+            'nextStep'     => [
+                'Contanos qué tipo (descartable, automática, pistola pour-on) y cuántas.',
+                'Decinos a qué localidad hay que enviarlas.',
+            ],
+            'crmTag'       => 'jeringas',
+            'nextLink'     => null,
+        ],
+        'raticidas' => [
+            'menuLabel'    => 'Raticidas',
+            'need'         => 'campo',
+            'tier'         => 'B',
+            'whatsappText' => 'Hola, quiero cotizar raticidas.',
+            'nextStep'     => [
+                'Contanos dónde los vas a usar (galpón, depósito, casa) y el tamaño aproximado.',
+                'Decinos a qué localidad hay que enviarlos.',
+            ],
+            'crmTag'       => 'raticidas',
+            'nextLink'     => ['path' => '/guias/como-eliminar-ratas-en-el-galpon/', 'label' => 'Cómo eliminar ratas del galpón'],
+        ],
+        'insecticidas' => [
+            'menuLabel'    => 'Insecticidas y hormiguicidas',
+            'need'         => 'campo',
+            'tier'         => 'B',
+            'whatsappText' => 'Hola, quiero cotizar insecticidas y hormiguicidas.',
+            'nextStep'     => [
+                'Contanos qué plaga querés controlar (moscas, hormigas, garrapatas del ambiente) y dónde.',
+                'Decinos a qué localidad hay que enviarlos.',
+            ],
+            'crmTag'       => 'insecticidas',
+            'nextLink'     => ['path' => '/guias/como-eliminar-hormigas-cortadoras/', 'label' => 'Cómo controlar hormigas cortadoras'],
+        ],
+        'fumigadoras' => [
+            'menuLabel'    => 'Mochilas fumigadoras',
+            'need'         => 'campo',
+            'tier'         => 'B',
+            'whatsappText' => 'Hola, quiero cotizar mochilas fumigadoras.',
+            'nextStep'     => [
+                'Contanos la capacidad que buscás y si la querés manual o a batería.',
+                'Decinos a qué localidad hay que enviarla.',
+            ],
+            'crmTag'       => 'fumigadoras',
+            'nextLink'     => null,
+        ],
         'curabichera' => [
             'menuLabel'    => 'Curabichera',
             'need'         => 'sanidad',

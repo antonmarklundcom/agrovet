@@ -23,8 +23,8 @@ return [
     ],
     'leadSlug' => 'antiparasitarios-para-ganado',
     'bundle'   => [
-        'antiparasitarios-para-ganado', 'curabichera', 'balanceados',
-        'sal-mineral', 'veterinario-rural',
+        'antiparasitarios-para-ganado', 'garrapaticidas', 'curabichera', 'vacunas-ganado',
+        'balanceados', 'veterinario-rural',
     ],
     'traps' => [
         [
