@@ -2495,3 +2495,19 @@ a.industries__item:focus-visible {
   font-family: var(--font-body);
   font-size: var(--t-note);
 }
+
+/* == arma-tu-pedido == */
+/* Reuses .tool, .tool-form, .field, .tool-result — only the preview box and
+   the per-product row spacing are new. */
+
+.pedido-row {
+  margin: 0;
+}
+
+.pedido-preview {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-body);
+  font-size: var(--t-small);
+  margin: 0;
+}
