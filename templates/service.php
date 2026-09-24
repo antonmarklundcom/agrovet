@@ -30,7 +30,10 @@ if (!empty($service['parent']) && ($parent = services($service['parent'])) !== n
 }
 $breadcrumbs[] = ['label' => $service['title'], 'path' => $service['path']];
 
+$heroImg = image_for('services', $slug ?? '');
+
 $page = [
+    'ogImage'     => image_og_path($heroImg) ?? '/assets/img/og-default.png',
     'title'       => $service['seoTitle'] !== '' ? $service['seoTitle'] : $service['title'],
     'description' => $service['metaDescription'],
     'path'        => $service['path'],
@@ -49,7 +52,7 @@ require ROOT_DIR . '/partials/header.php';
 ?>
 <main id="main">
 
-  <section class="page-hero">
+  <section class="page-hero<?= $heroImg !== null ? ' page-hero--media' : '' ?>">
     <div class="container">
       <?php require ROOT_DIR . '/partials/breadcrumbs.php'; ?>
       <div class="page-hero__inner">
@@ -72,6 +75,11 @@ require ROOT_DIR . '/partials/header.php';
           <?php endif; ?>
         </div>
       </div>
+      <?php if ($heroImg !== null): ?>
+        <div class="page-hero__media">
+          <?= picture($heroImg, 'page-hero__picture', '(min-width: 1024px) 40vw, 100vw', 1280, 960, true) ?>
+        </div>
+      <?php endif; ?>
     </div>
   </section>
 

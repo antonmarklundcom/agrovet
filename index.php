@@ -19,6 +19,7 @@ $page = [
     'description' => $meta['description'],
     'path'        => '/',
     'faq'         => content('ui')['home_faq'],
+    'ogImage'     => image_og_path(image_for('home', 'band')) ?? '/assets/img/og-default.png',
 ];
 
 /* Only real, confirmed figures reach the hero. Anything without a value and a
@@ -45,6 +46,17 @@ $homeTestimonials = array_filter(
    own label. */
 $homeWhatsapp = whatsapp_link(whatsapp_text_for_page());
 $homePhotos   = (array) site('photos');
+/* Generated imagery (content/images.php) fills the two "cómo funciona" slots and
+   the photo band; each renders only once its files exist in assets/img/. */
+$homeTall = image_for('home', 'about_tall');
+$homeSq   = image_for('home', 'about_square');
+$homeBand = image_for('home', 'band');
+if ($homeTall !== null) {
+    $homePhotos['portrait'] = ['src' => image_og_path($homeTall), 'alt' => $homeTall['alt']];
+}
+if ($homeSq !== null) {
+    $homePhotos['team'] = ['src' => image_og_path($homeSq), 'alt' => $homeSq['alt']];
+}
 
 require ROOT_DIR . '/partials/head.php';
 require ROOT_DIR . '/partials/header.php';
@@ -135,16 +147,24 @@ require ROOT_DIR . '/partials/header.php';
       ?>
       <div class="figures<?= $homeHasPhotos ? '' : ' figures--empty' ?>">
         <?php if (!empty($homePhotos['portrait']['src'])): ?>
+          <?php if ($homeTall !== null): ?>
+            <?= picture($homeTall, 'figures__tall', '(min-width: 1024px) 420px, 50vw', 960, 1280) ?>
+          <?php else: ?>
           <img class="figures__tall" src="<?= e(asset($homePhotos['portrait']['src'])) ?>"
                alt="<?= e($homePhotos['portrait']['alt'] ?? '') ?>" width="420" height="560" loading="lazy">
+          <?php endif; ?>
         <?php else: ?>
           <div class="figures__tall figures__slot" aria-hidden="true"></div>
         <?php endif; ?>
 
         <div class="figures__col">
           <?php if (!empty($homePhotos['team']['src'])): ?>
+            <?php if ($homeSq !== null): ?>
+              <?= picture($homeSq, 'figures__square', '(min-width: 1024px) 420px, 50vw', 1280, 1280) ?>
+            <?php else: ?>
             <img class="figures__square" src="<?= e(asset($homePhotos['team']['src'])) ?>"
                  alt="<?= e($homePhotos['team']['alt'] ?? '') ?>" width="420" height="420" loading="lazy">
+            <?php endif; ?>
           <?php else: ?>
             <div class="figures__square figures__slot" aria-hidden="true"></div>
           <?php endif; ?>
@@ -176,6 +196,13 @@ require ROOT_DIR . '/partials/header.php';
 
   <!-- Proceso ----------------------------------------------------------- -->
   <?php require ROOT_DIR . '/partials/process.php'; ?>
+
+  <!-- Banda campo: full-bleed photo, only once the image exists ------ -->
+  <?php if ($homeBand !== null): ?>
+    <section class="photo-band" aria-label="<?= e($homeBand['alt']) ?>">
+      <?= picture($homeBand, 'photo-band__picture', '100vw', 1920, 823) ?>
+    </section>
+  <?php endif; ?>
 
   <!-- Casos, or the rubros band while there are no testimonials ---------- -->
   <?php if ($homeTestimonials !== []): ?>

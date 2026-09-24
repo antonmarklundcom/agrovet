@@ -82,6 +82,17 @@ return [
         'priority'    => '0.8',
     ],
 
+    '/blog/' => [
+        'title'       => 'Blog de sanidad animal y campo',
+        'description' => 'Notas de temporada para productores y dueños de mascotas: bicheras, '
+                       . 'garrapatas, época seca y vacunación, con qué tener a mano en cada caso.',
+        'h1'          => 'Blog de sanidad animal y campo',
+        'lead'        => 'Qué preparar en cada temporada del año, para el campo y para tus animales.',
+        'stub'        => false,
+        'changefreq'  => 'weekly',
+        'priority'    => '0.6',
+    ],
+
     '/envios/' => [
         'title'       => 'Envíos a todo Paraguay',
         'description' => 'Cómo funcionan los envíos de productos veterinarios y agropecuarios a los 17 '

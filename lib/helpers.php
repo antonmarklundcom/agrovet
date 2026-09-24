@@ -344,3 +344,70 @@ function lead_label(string $slug): string
 
     return (string) ($page['navLabel'] ?? $page['title'] ?? $slug);
 }
+
+
+/**
+ * The image planned for a record, from content/images.php: ['slug' => ..., 'alt' => ...]
+ * or null. $type is 'services', 'segmentos', 'guias' or 'home'.
+ */
+function image_for(string $type, string $key): ?array
+{
+    $img = content('images')[$type][$key] ?? null;
+
+    return is_array($img) && image_widths($img['slug']) !== [] ? $img : null;
+}
+
+/**
+ * Widths that exist on disk for a webimg slug (<slug>-<w>.webp in assets/img/).
+ * An image whose files have not been generated yet has none, and every caller
+ * then renders nothing, so a planned slot never produces a broken <img>.
+ */
+function image_widths(string $slug): array
+{
+    static $cache = [];
+    if (!isset($cache[$slug])) {
+        $cache[$slug] = array_values(array_filter(
+            [640, 1280, 1920],
+            static fn (int $w): bool => is_file(ROOT_DIR . "/assets/img/{$slug}-{$w}.webp")
+        ));
+    }
+
+    return $cache[$slug];
+}
+
+/** Site-relative URL of the largest-but-1280 WebP of an image, for og:image. */
+function image_og_path(?array $img): ?string
+{
+    if ($img === null) {
+        return null;
+    }
+    $widths = image_widths($img['slug']);
+    $w = in_array(1280, $widths, true) ? 1280 : max($widths);
+
+    return "/assets/img/{$img['slug']}-{$w}.webp";
+}
+
+/**
+ * <picture> with AVIF + WebP srcsets for a webimg image. $w/$h set the intrinsic
+ * ratio (no layout shift); $eager marks the page's LCP image.
+ */
+function picture(?array $img, string $class, string $sizes, int $w, int $h, bool $eager = false): string
+{
+    if ($img === null) {
+        return '';
+    }
+    $widths = image_widths($img['slug']);
+    $set = static fn (string $ext): string => implode(', ', array_map(
+        static fn (int $x): string => asset("/assets/img/{$img['slug']}-{$x}.{$ext}") . " {$x}w",
+        array_filter($widths, static fn (int $x): bool => is_file(ROOT_DIR . "/assets/img/{$img['slug']}-{$x}.{$ext}"))
+    ));
+    $fallback = in_array(1280, $widths, true) ? 1280 : max($widths);
+
+    return '<picture class="' . e($class) . '">'
+        . '<source type="image/avif" srcset="' . e($set('avif')) . '" sizes="' . e($sizes) . '">'
+        . '<source type="image/webp" srcset="' . e($set('webp')) . '" sizes="' . e($sizes) . '">'
+        . '<img src="' . e(asset("/assets/img/{$img['slug']}-{$fallback}.webp")) . '" alt="' . e($img['alt']) . '"'
+        . ' width="' . $w . '" height="' . $h . '"'
+        . ($eager ? ' fetchpriority="high" decoding="async"' : ' loading="lazy" decoding="async"')
+        . '></picture>';
+}

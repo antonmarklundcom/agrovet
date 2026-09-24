@@ -26,7 +26,10 @@ if ($record === null) {
     return;
 }
 
+$heroImg = image_for('segmentos', $slug ?? '');
+
 $page = [
+    'ogImage'     => image_og_path($heroImg) ?? '/assets/img/og-default.png',
     'title'       => $record['seoTitle'],
     'description' => $record['metaDescription'],
     'path'        => $record['path'],
@@ -48,7 +51,7 @@ require ROOT_DIR . '/partials/header.php';
 ?>
 <main id="main">
 
-  <section class="page-hero">
+  <section class="page-hero<?= $heroImg !== null ? ' page-hero--media' : '' ?>">
     <div class="container">
       <?php require ROOT_DIR . '/partials/breadcrumbs.php'; ?>
       <div class="page-hero__inner">
@@ -62,6 +65,11 @@ require ROOT_DIR . '/partials/header.php';
           <?php endif; ?>
         </div>
       </div>
+      <?php if ($heroImg !== null): ?>
+        <div class="page-hero__media">
+          <?= picture($heroImg, 'page-hero__picture', '(min-width: 1024px) 40vw, 100vw', 1280, 960, true) ?>
+        </div>
+      <?php endif; ?>
     </div>
   </section>
 
