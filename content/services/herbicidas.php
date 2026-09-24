@@ -114,7 +114,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar herbicida', 'whatsappText' => ''],
     'related'   => ['glifosato', 'fertilizantes', 'semillas'],
-    'guides'    => ['control-de-malezas-en-pasturas'],
+    'guides'    => ['control-de-malezas-en-pasturas', 'tordon-herbicida'],
     'articles'  => [],
     'toolLinks' => [],
 ];

@@ -106,7 +106,7 @@ return [
     ],
     'cta'       => ['label' => 'Cotizar alambre', 'whatsappText' => ''],
     'related'   => ['tejido-de-alambre', 'bebederos', 'sal-mineral'],
-    'guides'    => ['cuanto-alambre-necesito'],
+    'guides'    => ['cuanto-alambre-necesito', 'alambre-dulce'],
     'articles'  => [],
     'toolLinks' => [
         [
