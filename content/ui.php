@@ -1,39 +1,41 @@
 <?php
 /**
  * Every UI string on the site, in one file — the single-locale layer. Nothing
- * in partials/ or templates/ contains a visible word; they all read from here,
- * so translating the site is this one file plus content/*.
+ * in partials/ or templates/ contains a visible word; they all read from here.
  *
- * The strings below are neutral Spanish (formal "usted"), matching the 'py'
- * market the example content uses. A Swedish site rewrites this file in
- * Swedish and sets 'market' => 'se' in content/site.php; no code changes.
+ * Register: Paraguayan Spanish with voseo ("pedí", "escribinos"), the way a
+ * producer or a pet owner writes on WhatsApp. Every content file follows it.
  *
  * Nothing here may name a month, a year, a price or a client: strings must stay
- * true without anyone remembering to edit them.
+ * true without anyone remembering to edit them. The site has no storefront yet,
+ * so no string claims an address, a stock level or a delivery time.
  */
 
 declare(strict_types=1);
 
 return [
 
-    // Cluster labels, in the order the mega-menu and the services hub use them.
-    // A cluster key is referenced by every service record ('cluster' => ...).
+    // Cluster labels, in the order the mega-menu and the products hub use them.
     'clusters' => [
-        'principal'  => 'Servicios principales',
-        'adicional'  => 'Servicios adicionales',
+        'sanidad'     => 'Sanidad animal',
+        'nutricion'   => 'Nutrición animal',
+        'campo'       => 'Campo y cultivos',
+        'veterinaria' => 'Atención veterinaria',
     ],
 
-    // One line under each cluster heading on the services hub. Keyed by cluster id.
+    // One line under each cluster heading on the products hub.
     'cluster_leads' => [
-        'principal' => 'Lo que hacemos todos los meses para la mayoría de nuestros clientes.',
-        'adicional' => 'Trabajos puntuales que se contratan cuando hacen falta.',
+        'sanidad'     => 'Antiparasitarios, curabicheras y medicamentos de uso veterinario, para ganado y mascotas.',
+        'nutricion'   => 'Sal mineral, balanceados y alimento para perros y gatos.',
+        'campo'       => 'Alambres, tejidos, herbicidas, fertilizantes, semillas y bebederos.',
+        'veterinaria' => 'Consultas para mascotas y atención de grandes animales en el campo.',
     ],
 
     'nav' => [
         'home'         => 'Inicio',
-        'services'     => 'Servicios',
+        'services'     => 'Productos',
         'pricing'      => 'Precios',
-        'tools'        => 'Herramientas',
+        'tools'        => 'Calculadoras',
         'guides'       => 'Guías',
         'about'        => 'Nosotros',
         'blog'         => 'Blog',
@@ -45,271 +47,263 @@ return [
         'open_menu'    => 'Abrir el menú',
         'close_menu'   => 'Cerrar el menú',
         'skip'         => 'Ir al contenido principal',
-        'firm'         => 'La empresa',
-        'all_services' => 'Ver todos los servicios',
+        'firm'         => 'Agroveterinaria',
+        'all_services' => 'Ver todos los productos',
     ],
 
     'cta' => [
-        'quote'         => 'Pedir presupuesto',
+        'quote'         => 'Pedir cotización',
         'whatsapp'      => 'WhatsApp',
-        'whatsapp_long' => 'Escribir por WhatsApp',
-        'consult'       => 'Solicitar una consulta',
+        'whatsapp_long' => 'Cotizar por WhatsApp',
+        'consult'       => 'Pedir cotización sin costo',
         'contact'       => 'Contactar',
-        'see_included'  => 'Ver qué incluye',
-        'talk'          => 'Hablar con nosotros',
+        'see_included'  => 'Ver qué ofrecemos',
+        'talk'          => 'Escribinos',
     ],
 
-    // The WhatsApp menu. These are BUTTON LABELS only — the message that
-    // actually reaches WhatsApp always comes from content/lead-values.php and
-    // names a service, never a generic "consulta gratis".
+    // The WhatsApp menu. BUTTON LABELS only — the message itself always comes
+    // from content/lead-values.php and names the product.
     'whatsapp' => [
-        'menu_title' => '¿Sobre qué quiere escribirnos?',
-        'menu_note'  => 'Abrimos WhatsApp con el mensaje ya escrito. Puede cambiarlo antes de enviarlo.',
+        'menu_title' => '¿Qué querés cotizar?',
+        'menu_note'  => 'Abrimos WhatsApp con el mensaje ya escrito. Podés cambiarlo antes de enviarlo.',
         'other'      => 'Otra consulta',
-        'this_page'  => 'Lo que está viendo',
+        'this_page'  => 'Lo que estás viendo',
         'open_menu'  => 'Abrir opciones de WhatsApp',
         'close_menu' => 'Cerrar',
     ],
 
     'home' => [
-        'eyebrow'   => 'Tomamos nuevos clientes',
-        'h1_lead'   => 'El titular de la portada va acá, ',
-        'h1_accent' => 'con la promesa al final.',
-        'lead'      => 'Una o dos líneas que explican qué hace el negocio, para quién y qué '
-                     . 'gana el cliente. Sin adjetivos que no se puedan sostener.',
+        'eyebrow'   => 'Envíos a todo Paraguay',
+        'h1_lead'   => 'Agroveterinaria online: ',
+        'h1_accent' => 'productos veterinarios y agropecuarios.',
+        'lead'      => 'Curabicheras, antiparasitarios, sal mineral, balanceados, alambres, herbicidas '
+                     . 'y fertilizantes. Mandanos tu lista por WhatsApp y te cotizamos sin costo, '
+                     . 'con el envío hasta tu estancia, chacra o casa.',
 
-        'services_eyebrow' => 'Servicios',
-        'services_title'   => 'Lo que hacemos',
-        'services_lead'    => 'Contrate lo que necesita hoy y sume servicios cuando haga falta.',
+        'services_eyebrow' => 'Productos',
+        'services_title'   => 'Todo para el campo y tus animales',
+        'services_lead'    => 'Elegí la categoría, contanos cantidades y te respondemos con precio y envío.',
 
-        'unsure_title' => '¿No sabe qué necesita?',
-        'unsure_text'  => 'Cuéntenos su situación y le decimos qué corresponde, sin costo.',
+        'unsure_title' => '¿No encontrás lo que buscás?',
+        'unsure_text'  => 'Mandanos el nombre del producto o una foto de la etiqueta y lo buscamos por vos.',
     ],
 
-    // The panel at the foot of the homepage hero. Labels only: no amounts, no
-    // dates, no percentages, no client name — see partials/status-panel.php.
+    // The panel at the foot of the homepage hero: an ILLUSTRATION of a quote
+    // request, labelled as such. No price, no stock, no delivery date.
     'panel' => [
-        'title' => 'Su trabajo del mes, a la vista',
-        'badge' => 'Al día',
+        'title' => 'Tu pedido por WhatsApp',
+        'badge' => 'Sin costo',
         'tiles' => [
-            ['label' => 'Primer entregable',  'value' => 'Listo'],
-            ['label' => 'Segundo entregable', 'value' => 'Listo'],
-            ['label' => 'Tercer entregable',  'value' => 'En curso'],
+            ['label' => 'Curabichera en aerosol', 'value' => '6 unidades'],
+            ['label' => 'Sal mineral para ganado', 'value' => '20 bolsas'],
+            ['label' => 'Alambre de púas',         'value' => '4 rollos'],
         ],
-        'foot'  => 'Próximo paso acordado',
-        'note'  => 'Ejemplo del informe mensual',
+        'foot'  => 'Cotización y envío en un solo mensaje',
+        'note'  => 'Ejemplo de pedido',
     ],
 
-    // The "quiénes somos" band on the homepage. Every line here is a commitment
-    // about how the business works, never a claim about size or results — those
-    // need the owner's confirmation and belong in content/site.php.
+    // The "cómo trabajamos" band. Commitments about the process, never a claim
+    // about size, years or stock.
     'about' => [
-        'eyebrow' => 'Quiénes somos',
-        'title'   => 'Una frase sobre cómo trabajamos y en qué se nota.',
-        'text'    => 'Dos o tres oraciones sobre el equipo, el proceso y el tipo de cliente que '
-                   . 'atiende. Concreto y verificable: qué hace, con qué frecuencia y qué recibe '
-                   . 'el cliente.',
-        // Shown while content/site.php has no credentials[] of its own.
+        'eyebrow' => 'Cómo funciona',
+        'title'   => 'Una sola lista, una sola respuesta, con el envío incluido en la cuenta.',
+        'text'    => 'En vez de recorrer agroveterinarias o llamar a cada proveedor, mandás lo que '
+                   . 'necesitás en un mensaje. Te respondemos con disponibilidad, precio y costo de '
+                   . 'envío hasta tu localidad, y vos decidís.',
         'credentials' => [
-            'Una persona asignada a su cuenta, no una mesa de entrada',
-            'Alcance y precio acordados por escrito antes de empezar',
-            'Respuesta dentro del siguiente día hábil',
+            'Cotización sin costo y sin compromiso',
+            'Envíos a los 17 departamentos y Asunción',
+            'Medicamentos de venta bajo receta, solo con receta',
         ],
         'badge_note'     => 'de experiencia',
-        'badge_fallback' => 'Equipo propio',
+        'badge_fallback' => 'Todo Paraguay',
     ],
 
-    // The four-step "cómo trabajamos" block, reused on service pages.
     'process' => [
-        'eyebrow' => 'Cómo trabajamos',
-        'title'   => 'De la primera conversación al primer entregable, con fechas acordadas.',
+        'eyebrow' => 'Cómo comprás',
+        'title'   => 'Del mensaje a tu campo en cuatro pasos.',
         'steps'   => [
             [
-                'title' => 'Conversación inicial',
-                'text'  => 'Media hora para entender qué necesita y en qué situación está hoy.',
+                'title' => 'Pedí',
+                'text'  => 'Mandanos por WhatsApp o por el formulario qué productos y qué cantidades necesitás.',
             ],
             [
-                'title' => 'Propuesta por escrito',
-                'text'  => 'Alcance detallado y precio, con lo que está incluido y lo que no.',
+                'title' => 'Cotizamos',
+                'text'  => 'Te respondemos con disponibilidad, precio y costo de envío hasta tu localidad.',
             ],
             [
-                'title' => 'Puesta en marcha',
-                'text'  => 'Recibimos la información, ordenamos lo pendiente y arrancamos.',
+                'title' => 'Confirmás',
+                'text'  => 'Si te sirve, confirmás el pedido y acordamos la forma de pago.',
             ],
             [
-                'title' => 'Seguimiento',
-                'text'  => 'Una persona asignada y un informe en lenguaje claro.',
+                'title' => 'Enviamos',
+                'text'  => 'Despachamos por transportadora o encomienda al punto que nos indiques.',
             ],
         ],
     ],
 
     // Rendered in place of the testimonials band while content/site.php has
-    // none. Sectors, not clients: nothing to verify.
+    // none. Species, not clients: nothing to verify.
     'industries' => [
-        'eyebrow' => 'Rubros',
-        'title'   => 'Rubros que atendemos',
-        'lead'    => 'Cada rubro tiene sus propias trampas. Estos son los que trabajamos.',
-        // Each item is either a plain string or ['label' => ..., 'path' => ...]
-        // pointing at a segment page in content/segmentos.php.
+        'eyebrow' => 'Para quién',
+        'title'   => 'Para ganaderos, productores y dueños de mascotas',
+        'lead'    => 'Productos para cada especie y cada tarea del campo.',
         'items'   => [
-            ['label' => 'Rubro de ejemplo', 'path' => '/segmentos/rubro-ejemplo/'],
+            'Bovinos de carne y leche',
+            'Porcinos',
+            'Aves de postura y engorde',
+            'Equinos',
+            'Perros y gatos',
+            'Chacras y huertas',
         ],
     ],
 
-    // The band renders only when content/site.php has testimonials.
     'testimonials' => [
-        'eyebrow' => 'Casos',
+        'eyebrow' => 'Clientes',
         'title'   => 'Lo que dicen nuestros clientes',
     ],
 
     'services_hub' => [
-        'eyebrow'      => 'Servicios',
-        'title'        => 'Todo lo que hacemos, en un solo lugar.',
-        'lead'         => 'Contrate lo que necesita hoy y sume servicios cuando haga falta.',
-        'unsure_title' => '¿No sabe qué necesita?',
-        'unsure_text'  => 'Cuéntenos su caso y le decimos qué servicios le corresponden.',
-        'unsure_cta'   => 'Escribirnos',
+        'eyebrow'      => 'Productos',
+        'title'        => 'Productos veterinarios y agropecuarios, con envío a todo el país.',
+        'lead'         => 'Elegí una categoría para ver qué ofrecemos, o mandanos tu lista completa y la cotizamos junta.',
+        'unsure_title' => '¿No está en la lista?',
+        'unsure_text'  => 'Mandanos el nombre comercial o una foto de la etiqueta y lo conseguimos.',
+        'unsure_cta'   => 'Escribinos',
     ],
 
     'cta_band' => [
-        'eyebrow' => 'Solicitar consulta',
-        'title'   => 'Empecemos con una conversación de 30 minutos.',
-        'lead'    => 'Sin costo y sin compromiso. Le respondemos con una propuesta concreta.',
+        'eyebrow' => 'Cotización sin costo',
+        'title'   => 'Mandanos tu lista y te respondemos con precio y envío.',
+        'lead'    => 'Sin compromiso. Podés pedir un solo producto o todo lo del mes.',
     ],
 
     'form' => [
-        'legend'          => 'Solicitar una consulta',
+        'legend'          => 'Pedir cotización',
         'name'            => 'Nombre',
-        'company'         => 'Empresa o rubro',
+        'company'         => 'Estancia, empresa o ciudad',
         'phone'           => 'WhatsApp o teléfono',
         'phone_hint'      => 'Ej.: 0981 123 456',
         'email'           => 'Correo (opcional)',
-        'need'            => '¿Qué necesita?',
-        'message'         => 'Cuéntenos brevemente',
-        'message_hint'    => 'Su situación actual, en dos líneas…',
-        'submit'          => 'Solicitar una consulta',
+        'need'            => '¿Qué necesitás?',
+        'message'         => 'Productos y cantidades',
+        'message_hint'    => 'Ej.: 10 curabicheras, 20 bolsas de sal mineral, envío a Santaní…',
+        'submit'          => 'Pedir cotización',
         'sending'         => 'Enviando…',
-        'privacy_note'    => 'Usamos sus datos solo para responderle. Ver la política de privacidad.',
-        'success_title'   => 'Recibimos su consulta.',
-        'success_text'    => 'Le respondemos dentro del siguiente día hábil. Si prefiere, escríbanos ahora.',
+        'privacy_note'    => 'Usamos tus datos solo para responderte. Ver la política de privacidad.',
+        'success_title'   => 'Recibimos tu pedido.',
+        'success_text'    => 'Te respondemos por WhatsApp con la cotización. Si preferís, escribinos ahora.',
         'error_title'     => 'No pudimos enviar el formulario.',
-        'error_text'      => 'Vuelva a intentarlo en un momento o escríbanos directamente.',
-        'error_phone'     => 'Necesitamos un teléfono o WhatsApp válido para responderle.',
+        'error_text'      => 'Volvé a intentarlo en un momento o escribinos directamente.',
+        'error_phone'     => 'Necesitamos un teléfono o WhatsApp válido para responderte.',
         'required'        => 'obligatorio',
         'thanks_next'     => 'Qué sigue',
-        'thanks_whatsapp' => 'Si prefiere no esperar, escríbanos ahora por WhatsApp.',
-        'remind_title'    => 'Que le avisemos antes de cada vencimiento',
-        'remind_text'     => 'Le anotamos su caso y le escribimos por WhatsApp unos días antes.',
-        'remind_phone'    => 'Su WhatsApp',
-        'remind_submit'   => 'Quiero que me recuerden',
-        'remind_ok'       => 'Anotado. Le escribimos antes del próximo vencimiento.',
+        'thanks_whatsapp' => 'Si no querés esperar, escribinos ahora por WhatsApp.',
+        'remind_title'    => 'Te avisamos cuándo toca la próxima dosis',
+        'remind_text'     => 'Anotamos tu pedido y te escribimos por WhatsApp cuando se acerca la reposición.',
+        'remind_phone'    => 'Tu WhatsApp',
+        'remind_submit'   => 'Quiero el recordatorio',
+        'remind_ok'       => 'Anotado. Te escribimos antes de la próxima reposición.',
     ],
 
-    // The chip selector in the lead form. Every key here needs a matching entry
-    // in content/lead-values.php's 'needs' — verify.sh checks that.
+    // The chip selector in the lead form. Every key needs a matching entry in
+    // content/lead-values.php's 'needs'.
     'needs' => [
-        'servicio' => 'Un servicio puntual',
-        'mensual'  => 'Trabajo mensual',
-        'otro'     => 'Otro',
+        'sanidad'     => 'Sanidad animal',
+        'nutricion'   => 'Sal mineral o balanceado',
+        'mascotas'    => 'Mascotas',
+        'campo'       => 'Alambres, herbicidas o fertilizantes',
+        'veterinario' => 'Atención veterinaria',
+        'otro'        => 'Otro',
     ],
 
     'contact' => [
         'eyebrow' => 'Contacto',
-        'title'   => 'Hablemos de su caso.',
-        'lead'    => 'Escríbanos por WhatsApp o déjenos sus datos y le respondemos dentro '
-                   . 'del siguiente día hábil.',
+        'title'   => 'Contanos qué necesitás.',
+        'lead'    => 'Escribinos por WhatsApp o dejanos tus datos y te respondemos con la cotización.',
         'address' => 'Dirección',
         'hours'   => 'Horario',
         'phone'   => 'Teléfono',
         'email'   => 'Correo',
         'expect'  => 'Qué pasa después',
         'steps'   => [
-            'Le respondemos dentro del siguiente día hábil.',
-            'Coordinamos una llamada de 30 minutos, sin costo ni compromiso.',
-            'Recibe una propuesta con el alcance y el precio por escrito.',
+            'Te respondemos por WhatsApp con disponibilidad y precio.',
+            'Te pasamos el costo de envío hasta tu localidad.',
+            'Confirmás solo si te sirve: la cotización no te compromete.',
         ],
     ],
 
     'service' => [
-        'includes'     => 'Qué incluye',
-        'excludes'     => 'Qué no incluye',
-        'we_need'      => 'Qué necesitamos de usted',
-        'benefits'     => 'Beneficios',
+        'includes'     => 'Qué ofrecemos',
+        'excludes'     => 'Importante',
+        'we_need'      => 'Para cotizarte, contanos',
+        'benefits'     => 'Por qué pedir acá',
         'faq'          => 'Preguntas frecuentes',
-        'related'      => 'Servicios relacionados',
+        'related'      => 'Productos relacionados',
         'guides'       => 'Guía relacionada',
         'articles'     => 'Artículo relacionado',
-        'form_eyebrow' => 'Presupuesto',
-        'form_lead'    => 'Déjenos sus datos y le respondemos con una propuesta concreta, '
+        'form_eyebrow' => 'Cotización',
+        'form_lead'    => 'Dejanos tus datos y la lista de productos: te respondemos con precio y envío, '
                         . 'sin costo y sin compromiso.',
         'breadcrumb'   => 'Ruta de navegación',
     ],
 
-    // Segment landing pages (content/segmentos.php).
     'segment' => [
-        'traps_title'  => 'Los errores que más le cuestan en su rubro',
-        'bundle_title' => 'Lo que armamos para su rubro',
-        'form_eyebrow' => 'Presupuesto para su rubro',
-        'form_lead'    => 'Cuéntenos su rubro y su volumen; le respondemos con una propuesta concreta.',
+        'traps_title'  => 'Los errores que más cuestan',
+        'bundle_title' => 'Lo que te conviene tener a mano',
+        'form_eyebrow' => 'Cotización',
+        'form_lead'    => 'Contanos cuántos animales tenés y te armamos la cotización.',
     ],
 
-    // Shared microcopy across the tool pages. Calculator-specific labels live in
-    // each tool's own PHP/JS; only the repeated strings are here.
     'tools' => [
-        'reviewed_prefix' => 'Datos revisados el',
-        'orientativo'     => 'Los resultados son orientativos y no reemplazan un cálculo oficial.',
+        'reviewed_prefix' => 'Revisado el',
+        'orientativo'     => 'Los resultados son orientativos: confirmá medidas y dosis con tu técnico o con la etiqueta del producto.',
         'calculate'       => 'Calcular',
         'result_title'    => 'Resultado',
-        'use_result'      => 'Usar este resultado en el formulario',
-        'need_js'         => 'Esta calculadora necesita JavaScript activado en su navegador.',
+        'use_result'      => 'Cotizar este resultado',
+        'need_js'         => 'Esta calculadora necesita JavaScript activado en tu navegador.',
         'restart'         => 'Volver a empezar',
     ],
 
-    // Shared microcopy across the guide pages.
     'guide' => [
         'reviewed_prefix'       => 'Revisado el',
-        'orientativo'           => 'Es una guía general: para su caso puntual, confírmelo con nosotros.',
-        'delegate_eyebrow'      => 'Delegarlo',
-        'delegate_title'        => '¿Prefiere que lo hagamos nosotros?',
-        'delegate_lead'         => 'Le respondemos dentro del siguiente día hábil con los pasos exactos '
-                                 . 'para su caso.',
-        'delegate_form_heading' => 'Pedir que nos encarguemos',
+        'orientativo'           => 'Es una guía general. Para dosis y diagnóstico, seguí la etiqueta del producto y consultá a tu veterinario.',
+        'delegate_eyebrow'      => 'Cotizar',
+        'delegate_title'        => '¿Necesitás el producto?',
+        'delegate_lead'         => 'Mandanos qué necesitás y cuántos animales o hectáreas tenés; te respondemos con precio y envío.',
+        'delegate_form_heading' => 'Pedir cotización',
         'related'               => 'Otras guías',
     ],
 
-    // Article chrome (templates/article.php). The long date itself is formatted
-    // by the market module's fmt_date_long().
     'article' => [
         'reading_time' => 'min de lectura',
         'updated'      => 'Actualizado el',
         'read_more'    => 'Leer el artículo',
     ],
 
-    // Hub pages: the listings under /servicios/, /blog/, /herramientas/, /guias/.
     'hub' => [
         'empty' => 'Todavía no hay nada publicado en esta sección.',
     ],
 
     'pricing' => [
-        'quote'    => 'A cotizar',
+        'quote'     => 'A cotizar',
         'per_month' => 'por mes',
-        'cta'      => 'Pedir presupuesto',
-        'note'     => 'Los planes se ajustan al volumen real; el precio final se acuerda por escrito.',
+        'cta'       => 'Pedir cotización',
+        'note'      => 'Los precios se confirman en cada cotización.',
     ],
 
     'placeholder' => [
-        // Shown on a stub page until the phase that owns it writes the content.
         'notice' => 'Estamos preparando esta página.',
-        'action' => 'Mientras tanto, escríbanos y le respondemos por WhatsApp.',
+        'action' => 'Mientras tanto, escribinos y te respondemos por WhatsApp.',
     ],
 
     'error404' => [
         'title' => 'No encontramos esta página',
-        'lead'  => 'Puede que el enlace haya cambiado. Estas son las secciones más buscadas.',
+        'lead'  => 'Puede que el enlace haya cambiado. Estas son las categorías más buscadas.',
     ],
 
     'footer' => [
-        'blurb'   => 'Una línea sobre el negocio y a quién atiende.',
+        'blurb'   => 'Productos veterinarios y agropecuarios con cotización sin costo y envío a todo Paraguay.',
         'rights'  => 'Todos los derechos reservados.',
         'contact' => 'Contacto',
     ],

@@ -37,73 +37,14 @@
 
 declare(strict_types=1);
 
-return [
+/* Product categories and vet services live under /productos/ and /veterinaria/. One file per record in content/services/<slug>.php, returning that
+   record; the file name is the slug. Records sort by their optional 'order'
+   key (default 100), then by slug — so parallel writers never touch one file. */
+$records = [];
+foreach (glob(__DIR__ . '/services/*.php') ?: [] as $file) {
+    $records[basename($file, '.php')] = require $file;
+}
+uksort($records, static fn (string $a, string $b): int =>
+    [($records[$a]['order'] ?? 100), $a] <=> [($records[$b]['order'] ?? 100), $b]);
 
-    'servicio-ejemplo' => [
-        'example' => true,
-        'path'            => '/servicios/servicio-ejemplo/',
-        'title'           => 'Servicio de ejemplo',
-        'navLabel'        => 'Servicio de ejemplo',
-        'cluster'         => 'principal',
-        'parent'          => null,
-        'seoTitle'        => 'Servicio de ejemplo',
-        'metaDescription' => 'Página de servicio de ejemplo: muestra todos los bloques que el '
-                           . 'template renderiza cuando el registro tiene datos completos.',
-        'hero' => [
-            'eyebrow' => 'Servicios',
-            'h1'      => 'Servicio de ejemplo',
-            'h2'      => 'El subtítulo va acá, con la promesa concreta.',
-            'lead'    => 'Un párrafo que explica el servicio en los términos del cliente: qué '
-                       . 'problema resuelve, con qué frecuencia y qué recibe.',
-        ],
-        'includes' => [
-            'Primer entregable, con su frecuencia',
-            'Segundo entregable',
-            'Una persona asignada a su cuenta',
-        ],
-        'excludes' => [
-            'Lo que se cotiza aparte',
-        ],
-        'weNeed' => [
-            'La documentación que hace falta para empezar',
-        ],
-        'sections' => [
-            [
-                'h2'   => 'Cómo trabajamos este servicio',
-                'body' => [
-                    'Dos o tres párrafos de copy real. Este bloque acepta párrafos y, opcionalmente, '
-                        . 'una grilla de tarjetas con "items".',
-                ],
-                'items' => [
-                    ['title' => 'Un detalle', 'text' => 'Una línea que lo explica.'],
-                    ['title' => 'Otro detalle', 'text' => 'Otra línea que lo explica.'],
-                ],
-            ],
-        ],
-        'benefits' => [
-            ['title' => 'Beneficio uno', 'text' => 'Por qué le conviene, en una línea.'],
-            ['title' => 'Beneficio dos', 'text' => 'Por qué le conviene, en una línea.'],
-        ],
-        'faq' => [
-            [
-                'q' => '¿Cuánto demora?',
-                'a' => 'Una respuesta concreta y verificable. Nada que no se pueda sostener.',
-            ],
-            [
-                'q' => '¿Qué necesitan de mí para empezar?',
-                'a' => 'La lista corta de lo que el cliente tiene que enviar.',
-            ],
-        ],
-        'cta'       => ['label' => 'Pedir presupuesto', 'whatsappText' => ''],
-        'related'   => [],
-        'guides'    => ['guia-ejemplo'],
-        'articles'  => ['articulo-ejemplo'],
-        'toolLinks' => [
-            [
-                'path'  => '/herramientas/herramienta-ejemplo/',
-                'label' => 'Calcule usted mismo',
-                'text'  => 'La calculadora de ejemplo, para hacer la cuenta antes de escribirnos.',
-            ],
-        ],
-    ],
-];
+return $records;
