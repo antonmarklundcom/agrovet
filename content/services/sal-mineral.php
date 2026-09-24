@@ -113,6 +113,6 @@ return [
     'cta'       => ['label' => 'Cotizar sal mineral', 'whatsappText' => ''],
     'related'   => ['balanceados', 'antiparasitarios-para-ganado', 'curabichera'],
     'guides'    => ['sal-mineral-para-ganado'],
-    'articles'  => [],
+    'articles'  => ['epoca-seca-sal-mineral'],
     'toolLinks' => [],
 ];

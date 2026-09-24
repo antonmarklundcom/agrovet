@@ -114,6 +114,6 @@ return [
     'cta'       => ['label' => 'Cotizar curabichera', 'whatsappText' => ''],
     'related'   => ['antiparasitarios-para-ganado', 'ivermectina', 'sal-mineral'],
     'guides'    => ['como-usar-curabichera'],
-    'articles'  => [],
+    'articles'  => ['temporada-de-bicheras'],
     'toolLinks' => [],
 ];

@@ -115,6 +115,6 @@ return [
     'cta'       => ['label' => 'Cotizar garrapaticida', 'whatsappText' => ''],
     'related'   => ['antiparasitarios-para-ganado', 'ivermectina', 'sal-mineral'],
     'guides'    => ['garrapata-en-bovinos'],
-    'articles'  => [],
+    'articles'  => ['temporada-de-garrapatas'],
     'toolLinks' => [],
 ];
