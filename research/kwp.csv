@@ -136,3 +136,67 @@ magnesio,6600,0.21,2.55,skip-human
 antiparasitario para adultos,1600,,,skip-human
 ivermectina dosis adulto,1600,,,skip-human
 ivermectina crema,590,,,skip-human
+nexgard,2900,0.58,2.92,pets-brand
+nexgard spectra,1000,0.40,2.87,pets-brand
+nexgard para perros,880,,,pets-brand
+nexgard precio,210,,,pets-brand
+nexgard para gatos,210,,,pets-brand
+bravecto,720,0.80,8.78,pets-brand
+bravecto precio,210,,,pets-brand
+simparica,210,,,pets-brand
+afoxolaner,140,,,pets-brand
+sarna en perros,1000,,,pets-guide
+sarna gatos,480,,,pets-guide
+gatos con sarna,480,,,pets-guide
+caracha en perro,140,,,pets-guide
+sarna en perros tratamiento,110,,,pets-guide
+pipeta para perros,590,,,antipulgas
+pipetas para gatos,390,,,antipulgas
+remedio para garrapatas en perros,390,,,antipulgas
+remedio para las garrapatas,170,,,antipulgas
+remedio para pulgas en perros,140,,,antipulgas
+collar antipulgas para perros,110,,,antipulgas
+antipulgas para perros,90,,,antipulgas
+vacuna antirrábica,390,,,vet
+antirrabica,260,,,vet
+antirrabica en perros,90,,,vet
+veneno para ratas,880,,,raticidas
+raticida,170,,,raticidas
+insecticida,720,,,insecticidas
+cipermetrina,720,,,insecticidas
+rastreros,390,,,insecticidas
+tierra de diatomeas,320,,,insecticidas
+jabón potásico,320,,,insecticidas
+mata moscas,260,,,insecticidas
+sevin insecticida,210,,,insecticidas
+mata cucarachas,140,,,insecticidas
+cebo para hormigas,110,,,insecticidas
+hormiguicida,70,,,insecticidas
+fipronil,590,,,actives
+oxitetraciclina,480,,,actives
+levamisol,320,,,actives
+doramectina,210,,,actives
+dectomax para que sirve,110,,,actives
+dectomax precio,90,,,actives
+albendazol,4400,,,actives (mostly human)
+gusano barrenador,390,,,sanidad
+pour on,110,,,sanidad
+mochila fumigadora,50,,,fumigadoras
+mochila pulverizadora,50,,,fumigadoras
+fumigadora jacto 20 litros precio,50,,,fumigadoras
+vitamina para vacas flacas,50,,,vitaminas
+vitaminas para vacas,40,,,vitaminas
+calcio para vacas,40,,,vitaminas
+vacuna reproductiva en bovinos,40,,,vacunas
+jeringa para vacunar ganado precio,30,,,jeringas
+brachiaria brizantha,480,,,semillas
+brizantha marandu,260,,,semillas
+brachiaria,170,,,semillas
+sorgo forrajero,140,,,semillas
+silo bolsa,260,,,silo
+bolsa silo,260,,,silo
+gallinas ponedoras,390,,,aves
+ponedoras,170,,,aves
+comederos para gallinas,210,,,aves
+balanceado para gallina ponedora,90,,,aves
+antiparasitario para caballo,50,,,equinos

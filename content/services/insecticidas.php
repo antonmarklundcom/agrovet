@@ -8,7 +8,7 @@ return [
     'navLabel'        => 'Insecticidas',
     'cluster'         => 'campo',
     'parent'          => null,
-    'seoTitle'        => 'Insecticidas y hormiguicidas de campo',
+    'seoTitle'        => 'Insecticida: cipermetrina, hormiguicida',
     'metaDescription' => 'Insecticidas y hormiguicidas para hormigas cortadoras, mosquicidas para galpones y '
                        . 'tambos. Cotizá por WhatsApp sin costo, envío a todo Paraguay.',
     'hero' => [

@@ -11,15 +11,15 @@ return [
     'order'           => 25,
     'path'            => '/productos/antipulgas-para-perros-y-gatos/',
     'title'           => 'Antipulgas para perros y gatos',
-    'navLabel'        => 'Antipulgas',
+    'navLabel'        => 'Pipetas y antipulgas',
     'cluster'         => 'sanidad',
     'parent'          => null,
-    'seoTitle'        => 'Antipulgas para perros y gatos',
+    'seoTitle'        => 'Pipeta para perros y gatos: antipulgas',
     'metaDescription' => 'Pipetas, collares y comprimidos antipulgas para perros y gatos, por peso '
                        . 'y especie. Cotizá por WhatsApp sin costo y recibilo en todo Paraguay.',
     'hero' => [
         'eyebrow' => 'Sanidad animal',
-        'h1'      => 'Antipulgas para perros y gatos',
+        'h1'      => 'Pipetas y antipulgas para perros y gatos',
         'h2'      => 'Pipetas, collares y comprimidos masticables, elegidos por peso y por especie.',
         'lead'    => 'Las pulgas no se van solas y las garrapatas encima traen otros riesgos. '
                    . 'Contanos si es para perro o gato, el peso aproximado y si preferís pipeta, '

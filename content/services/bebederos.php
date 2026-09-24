@@ -5,15 +5,15 @@ return [
     'order'           => 60,
     'path'            => '/productos/bebederos-para-animales/',
     'title'           => 'Bebederos',
-    'navLabel'        => 'Bebederos',
+    'navLabel'        => 'Bebederos y comederos',
     'cluster'         => 'campo',
     'parent'          => null,
-    'seoTitle'        => 'Bebederos para aves, cerdos y ganado',
+    'seoTitle'        => 'Bebederos y comederos para gallinas',
     'metaDescription' => 'Bebederos para gallinas, chupón para cerdos y bebederos de nivel para ganado. '
                        . 'Cotizá por WhatsApp sin costo y recibilos en todo Paraguay.',
     'hero' => [
         'eyebrow' => 'Insumos de campo',
-        'h1'      => 'Bebederos para animales',
+        'h1'      => 'Bebederos y comederos para gallinas, cerdos y ganado',
         'h2'      => 'Bebederos para aves, chupón para cerdos y bebederos de nivel para ganado, con envío a todo Paraguay.',
         'lead'    => 'Un bebedero que gotea, se ensucia rápido o no alcanza para el lote entero termina '
                    . 'costando en consumo de agua y en sanidad. Mandanos para qué animal y cuántos '
@@ -21,6 +21,7 @@ return [
     ],
     'includes' => [
         'Bebederos automáticos para gallinas y aves de galpón',
+        'Comederos para gallinas y pollos: tolvas colgantes y comederos lineales',
         'Chupón (bebedero a chupete) para cerdos',
         'Bebederos de nivel para ganado bovino',
         'Distintos materiales y capacidades según el tamaño del lote',

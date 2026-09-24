@@ -5,15 +5,15 @@ return [
     'order'           => 70,
     'path'            => '/productos/raticidas/',
     'title'           => 'Raticidas',
-    'navLabel'        => 'Raticidas',
+    'navLabel'        => 'Veneno para ratas',
     'cluster'         => 'campo',
     'parent'          => null,
-    'seoTitle'        => 'Raticidas: cebos y envío a todo el país',
+    'seoTitle'        => 'Veneno para ratas: raticidas y cebos',
     'metaDescription' => 'Raticidas en cebos en bloque y pellet, y cebaderos para proteger galpones y depósitos '
                        . 'de granos. Cotizá por WhatsApp sin costo, envío a todo Paraguay.',
     'hero' => [
         'eyebrow' => 'Control de plagas',
-        'h1'      => 'Raticidas para galpones y depósitos de granos',
+        'h1'      => 'Veneno para ratas y raticidas para galpones y depósitos',
         'h2'      => 'Cebos en bloque y pellet, y cebaderos para proteger a niños, mascotas y animales de granja.',
         'lead'    => 'Las ratas contaminan el grano, rompen bolsas y dañan instalaciones, y se multiplican '
                    . 'rápido si no se actúa. Mandanos dónde tenés el problema y cuánta superficie hay que '

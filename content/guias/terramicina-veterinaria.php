@@ -6,13 +6,13 @@ return [
     'path'            => '/guias/terramicina-veterinaria/',
     'title'           => 'Terramicina veterinaria',
     'navLabel'        => 'Terramicina veterinaria',
-    'seoTitle'        => 'Terramicina veterinaria: qué es',
+    'seoTitle'        => 'Oxitetraciclina (Terramicina) veterinaria',
     'metaDescription' => 'Terramicina veterinaria (oxitetraciclina): qué es, venta bajo receta y '
                        . 'tiempo de retiro. Solo para animales. Cotizá sin costo ni compromiso.',
     'lastReviewed'    => '2026-09-24',
     'hero' => [
         'eyebrow' => 'Guías',
-        'h1'      => 'Terramicina veterinaria: qué es y cómo se usa',
+        'h1'      => 'Oxitetraciclina (Terramicina) veterinaria: qué es y cómo se usa',
         'lead'    => 'El antibiótico de amplio espectro más conocido para uso veterinario. Qué es '
                    . 'la oxitetraciclina, cuándo se receta y qué cuidados lleva.',
     ],

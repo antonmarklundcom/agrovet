@@ -73,6 +73,54 @@ return [
     ],
 
     'services' => [
+        'nexgard' => [
+            'menuLabel'    => 'NexGard',
+            'need'         => 'mascotas',
+            'tier'         => 'C',
+            'whatsappText' => 'Hola, quiero cotizar NexGard para perros.',
+            'nextStep'     => [
+                'Decinos el peso de tu perro y si buscás NexGard o NexGard Spectra.',
+                'Contanos cuántas cajas y a qué localidad hay que enviarlas.',
+            ],
+            'crmTag'       => 'nexgard',
+            'nextLink'     => ['path' => '/guias/pulgas-y-garrapatas-en-perros/', 'label' => 'Remedio para garrapatas en perros'],
+        ],
+        'bravecto' => [
+            'menuLabel'    => 'Bravecto',
+            'need'         => 'mascotas',
+            'tier'         => 'C',
+            'whatsappText' => 'Hola, quiero cotizar Bravecto para perros.',
+            'nextStep'     => [
+                'Decinos el peso de tu perro (o gato) y la presentación que buscás.',
+                'Contanos cuántas unidades y a qué localidad hay que enviarlas.',
+            ],
+            'crmTag'       => 'bravecto',
+            'nextLink'     => ['path' => '/guias/pulgas-y-garrapatas-en-perros/', 'label' => 'Remedio para garrapatas en perros'],
+        ],
+        'simparica' => [
+            'menuLabel'    => 'Simparica',
+            'need'         => 'mascotas',
+            'tier'         => 'C',
+            'whatsappText' => 'Hola, quiero cotizar Simparica para perros.',
+            'nextStep'     => [
+                'Decinos el peso de tu perro y si buscás Simparica o Simparica Trio.',
+                'Contanos cuántas cajas y a qué localidad hay que enviarlas.',
+            ],
+            'crmTag'       => 'simparica',
+            'nextLink'     => ['path' => '/guias/sarna-en-perros/', 'label' => 'Sarna en perros'],
+        ],
+        'silo-bolsa' => [
+            'menuLabel'    => 'Silo bolsa',
+            'need'         => 'campo',
+            'tier'         => 'A',
+            'whatsappText' => 'Hola, quiero cotizar silo bolsa.',
+            'nextStep'     => [
+                'Contanos el diámetro y el largo que necesitás, y para qué grano o forraje.',
+                'Decinos cuántas bolsas y a qué localidad hay que enviarlas.',
+            ],
+            'crmTag'       => 'silo-bolsa',
+            'nextLink'     => null,
+        ],
         'antipulgas' => [
             'menuLabel'    => 'Antipulgas para perros y gatos',
             'need'         => 'mascotas',
