@@ -39,7 +39,7 @@ Everything that is not the site (`docs/`, `research/`, `tests/`, `deploy/`, `*.m
 2. **`config.php`**: File Manager → `public_html` → copy `config.example.php` to
    `config.php` and fill it in. It is git-ignored, so deploys never overwrite it.
    - `SITE_URL` → `https://agroveterinaria.com.py`
-   - `VENDERCRM_URL`, `VENDERCRM_API_KEY` → leads land in VenderCRM
+   - CRM: use `../private/vendercrm.php` with `VENDERCRM_URL` (HTTPS origin) and `VENDERCRM_API_KEY`; see README persistent setup. Keep it outside the deployment root.
    - `RESEND_API_KEY`, `LEAD_NOTIFY_TO`, `LEAD_FROM` → an email per lead
    - `GA4_ID` (and `ADS_ID` if you run Google Ads)
 
